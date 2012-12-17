@@ -1,0 +1,140 @@
+body {margin:0; padding:0; color:#fff; overflow-y:auto; background:url(../images/pattern-tile.jpg) repeat;}
+.freight-medium {font-weight:400;}
+.freight-bold {font-weight:700;}
+.freight-book {font-family: "freight-sans-pro",sans-serif; font-style: normal; font-weight: 400;}
+.page-title {position:relative; top:-2px; background:url(../images/half-circle.png) no-repeat; z-index:2;
+	width:240px; height:50px; margin-left:270px; padding-top:20px; font-size:14px; text-transform:uppercase; text-align:center; font-weight:700; letter-spacing:1.5px;}
+#about, #menu, #news, #contact, #gifts {width:774px; position:absolute; top:0; left:280px; font:normal 14px "freight-sans-pro";
+ letter-spacing:1px; background:#2c2c2c; padding-right:40px; line-height:22px;}
+.line {position:relative; float:left; width:774px; height:1px; background:#bcbcbc; margin-bottom:50px;}
+.white-bullet {position:relative; float:left;}
+a img {border:0;}
+.bgimg {display:none;}
+
+/*HEADER*/
+#header {position:relative; float:left; width:280px; background:#ef4030; height:100%; font:normal 12px "freight-sans-pro"; z-index:10; letter-spacing:1.5px;}
+#header div, #header a {position:relative; float:left; width:100%; text-align:center;}
+#header .header-cont {width:180px; margin:50px 0px 30px 55px;}
+/*#header #logo {margin-bottom:50px; background:url(../images/logo.png) no-repeat; width:155px; height:75px;}*/
+#header #logo {margin-bottom:45px; height:72px;}
+#header #logo img:hover {width:147px; height:67px; margin-bottom:50px;}
+#header .header-text {font-size:12px; text-transform:uppercase; margin-bottom:35px;}
+#header .header-links {font-size:14px; text-transform:uppercase; margin-bottom:20px; color:#fff; text-decoration:none; letter-spacing:.75px;}
+#header .header-links:hover, #header .address a:hover, #home-circle .view-menu:hover, #header .site-credit:hover {color:#191919 !important;}
+.mailto:hover {color:#EF4030 !important; text-decoration:none;}
+#header .dryer-img {margin:10px 0 20px 0;}
+#header .address {font-size:14px; text-transform:lowercase; margin-bottom:30px;}
+#header .hours {text-transform:none !important;}
+#header .address a {color:#fff; text-decoration:none;}
+#header .social-links {margin-right:30px; width:20px; height:20px;}
+#header .social-links:hover {background-position: 0 -20px !important;}
+#header #facebook {background:url(../images/facebook.gif) no-repeat;}
+#header #twitter {background:url(../images/twitter.gif) no-repeat;}
+#header #pinterest {background:url(../images/pinterest.gif) no-repeat;}
+#header #instagram {margin-right:0 !important; background:url(../images/instagram.gif) no-repeat;}
+#header .site-credit {position:relative; float:left; width:100%; margin-top:30px; text-transform:uppercase; color:#fff; text-decoration:none;}
+#header #mobile-tab {display:none; position:absolute; bottom:-31px; width:48px; height:31px; background:url(../images/mobile-tab.png) 50% 0 no-repeat;}
+
+/*HOMEPAGE*/
+#home {position:fixed; top:0; left:280px; width:100%;}
+#bg-img {position:fixed; top:0px; left:280px !important; z-index:-1;}
+#home-circle {background:url(../images/home-circle.png) no-repeat; width:278px; height:278px; position:absolute; z-index:5;}
+#home-circle .view-menu {position:absolute; bottom:55px; width:100%; text-align:center; text-transform:uppercase; color:#fff; text-decoration:none; font:normal 12px "freight-sans-pro";}
+
+/*ABOUT*/  /*GROUPS AND EVENTS*/
+#about .main-image, #contact .main-image {position:relative; float:left; width:100%;}
+#about .main-image img, #contact .main-image img {width:774px; margin-top:-70px;}
+#about .about-text {width:495px; position:relative; float:left; margin:35px 25px;}
+#about .about-text .text-title {font-size:20px; text-transform:uppercase;}
+#about .feature-cont {position:relative; float:left; margin-top:70px; width:225px;}
+#about .feature-img {position:relative; float:left; margin-bottom:20px;}
+#about .feature-img img {width:225px !important; height:150px !important;}
+
+
+/*MENU*/   /*GIFT CERTIFICATES*/
+#menu .page-title, #gifts .page-title {margin-bottom:70px;}
+#menu .subtitle-cont, #gifts .subtitle-cont {position:relative; float:left; text-align:center; margin-left:25%;}
+#menu .subtitle, #gifts .subtitle {font-size:24px; position:relative; float:left; margin-bottom:25px;  width:100%; text-align:center;}
+#gifts .subtitle {margin-bottom:15px !important;}
+#menu .subtitle-text, #gifts .subtitle-text {font-size:24px; position:relative; float:left;}
+#menu .italic, #gifts .italic {font-size:20px; position:relative; float:left; margin:4px; font-family: "adobe-caslon-pro",serif; font-style: italic; font-weight: 400; text-transform:capitalize;}
+#menu .subtitle span, #gifts .subtitle span {font-family: "adobe-caslon-pro",serif; font-style: italic; font-weight: 400; font-size:20px; text-transform:capitalize;}
+#menu .didot, #gifts .didot {font-family:'Didot'; font-size:60px; position:relative; float:left; margin:7px 15px 0 0;}
+#menu .dollar, #gifts .dollar {font-size:35px; position:relative; float:left; font-family:'Didot'; margin-top:-5px}
+#menu .styles-cont, #gifts .styles-cont {position:relative; float:left; width:100%; margin-bottom:45px;}
+#menu .style-single, #gifts .style-single {position:relative; float:left; width:175px; height:260px; margin:45px 0 0 65px; text-align:center;}
+#menu .single-icon, #gifts .single-icon {position:relative; float:left; width:100%; background:url(../images/red-circle.gif) 50% 0 no-repeat;}
+#menu .single-icon img:hover {width:81px; height:81px; margin-bottom:5px; margin-top:5px;}
+#menu .single-title, #gifts .single-title {font-size:18px; position:relative; float:left; margin:10px 0; width:100%; text-transform:uppercase;}
+#menu .single-text, #gifts .single-text {position:relative; float:left; font-size:14px; width:100%;}
+#menu .single-text i {font-family: "adobe-caslon-pro",serif; font-style: italic; font-weight: 600; letter-spacing:.5px;}
+#menu .price, #gifts .price {position:relative; float:left; font:normal 24px 'Didot'; width:100%; margin-bottom:10px;}
+#menu .price span, #gifts .price span {font-size:14px; position:absolute; top:2px; left:64px;}
+#menu .style-link, #gifts .style-link {position:relative; float:left; color:#fff; text-decoration:none; width:100%; font-size:11px; text-transform:uppercase; margin-top:5px;
+ font-family: "freight-sans-pro",sans-serif; font-style: normal; font-weight: 700; letter-spacing:1.5px;}
+#menu .style-link:hover {text-decoration:none; color:#acacac;}
+#menu .tlc .style-link, #menu .therapy .style-link {display:none;}
+
+#menu .specialty .style-single {margin-left:18px !important;}
+#gifts .splurge .style-single {margin-left:110px !important; width:225px !important; height:172px !important;}
+#gifts .tabs .style-single {height:150px !important;}
+#gifts .tabs .single-text {font-style:italic !important;}
+#menu .treat .single-icon {background:url(../images/gray-circle.gif) 50% 0 no-repeat;}
+#gifts .single-icon {background:none !important;}
+#gifts .gift-headline {font-size:14px; font-style:italic; text-align:center; position:relative; float:left; width:100%;}
+
+/*STYLES PAGE*/
+.styles-page {position:fixed; top:0; left:280px !important;}
+.styles-menu {width:278px; position:fixed; bottom:0; padding-bottom:10px; text-align:center; background:url(../images/styles-menu.png) no-repeat; z-index:5; display:none;}
+.styles-menu #select-style {position:relative; float:left; width:100%; font:bold 14px "freight-sans-pro"; text-transform:uppercase; margin:50px 0 20px; letter-spacing:.5px;}
+.styles-menu .styles-menu-link {position:relative; float:left; padding-top:10px; width:100%; text-transform:uppercase;
+	font:normal 15px "freight-sans-pro"; color:#fff; text-decoration:none; letter-spacing:1px; display:none;}
+.styles-menu .styles-menu-link:hover {color:#191919;}
+#styles-circle { display:none; background:url(../images/menu-circle.png) no-repeat; width:278px; height:278px; position:absolute; z-index:5; font-family: "freight-sans-pro",sans-serif; font-style:normal; font-weight: 500;}
+#styles-circle div {position:relative; float:left; width:100%; text-align:center;}
+#styles-circle .title {font-size:32px; text-transform:uppercase; margin-top:75px;}
+#styles-circle .sub {font-size:20px; font-style:italic; text-transform:capitalize;}
+#styles-circle .instruction {font-size:12px; text-transform:uppercase; margin:50px 0 0 58px; width:160px;}
+.high-maintenance .style-link, #styles-circle .instruction .ios {display:none;}
+
+/*SLIDER*/
+.cycloneslider {z-index:2; width:100% !important;}
+	
+/*NEWS*/
+#news .post-content {position:relative; float:left; margin:35px 0 22px 30px; width:660px;}
+#news .date {position:relative; float:left; font-family: "adobe-caslon-pro",serif; font-style: italic; font-weight: 600; width:100%; font-size:14px; letter-spacing:.5px;}
+#news .title {position:relative; float:left; width:100%; font-size:18px; text-transform:uppercase; letter-spacing:1.5px;}
+#news .line {margin-bottom:0px;}
+#news .post-text {position:relative; float:left;}
+#news .post-text a {color:#fff;}
+#news .post-text a:hover {text-decoration:none; color:#ef4030;}
+#news #nav-below {position:relative; float:left; width:100%; margin-top:10px; }
+#news #nav-below .slash {position:relative; float:left; margin:0 15px;}
+#news .nav-previous, #news .nav-next {float:right;}
+#news .nav-previous a, #news .nav-next a {color:#fff; text-transform:uppercase; text-decoration:none;} 
+
+
+/*CONTACT*/
+#contact .directions {position:absolute; bottom:6px; right:0; font-size:13px; background:#ef4030; padding:12px 20px; 
+	text-transform:uppercase; color:#fff;}
+#contact #form-cont, #contact .other {position:relative; float:left; margin:40px 0 0 25px;}
+#contact .title {position:relative; float:left; margin-bottom:25px; font-size:18px; text-transform:uppercase; width:100%;}
+#contact .text {position:relative; float:left; margin-bottom:35px; font-size:14px; width:475px;}
+#contact #contact-form {position:relative; float:left; width:750px; margin-bottom:50px;}
+#contact .input-cont {position:relative; float:left; width:230px; margin:0 30px 25px 0;}
+#contact .comment-cont {position:relative; float:left; width:750px;}
+#contact .form-input {position:relative; float:left; width:215px; height:40px; background:#5f5f5f; border:none; padding-left:10px; color:#000;}
+#contact textarea {width:740px !important; height:160px !important; padding-top:10px; font:normal 13px "freight-sans-pro"; resize:none;}
+#contact .input-label {position:relative; float:left; font-size:13px; margin-bottom:5px; width:100%;}
+#contact #contact-form .last {margin-right:0px !important;}
+#contact .submit-btn {position:relative; float:right; margin-top:15px;}
+#contact .submit-btn input {border:none; background:#ef4030; color:#fff; font-size:15px; padding:15px 80px; cursor:pointer;}
+#contact .submit-btn input:hover {background:#000;}
+#contact .other a {color:#fff;}
+#contact .other a:hover {text-decoration:none; color:#ef4030;}
+#contact .subscribe-cont {position:relative; float:left; width:100%;}
+#contact .emma-submit input {font-size:13px !important; padding:0px 12px !important; height:42px; position:relative; float:left;}
+#contact .emma-submit {margin:0 0 0 15px; float:left !important;}
+#contact .emma-status {position:relative; float:left; width:100%; margin-top:10px; color:#fff;}
+#contact .submit-btn  input[type=submit] {-webkit-appearance: none;}
+
