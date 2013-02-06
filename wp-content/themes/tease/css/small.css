@@ -65,6 +65,8 @@
 #gifts .gift-headline {font-size:11px; width:300px; margin-left:10px}
 #gifts .tabs .style-single {height:120px !important;}
 #gifts .vip {padding-bottom:30px;}
+#gifts #form-cont, #contact-form, #gifts .text {width:265px !important;}
+#gifts #form-cont {margin-top:40px;}
 
 	/*STYLES PAGE*/
 .styles-page {position:relative; float:left; left:0 !important;}	

@@ -44,9 +44,17 @@ get_header(); ?>
 				<div class="single-text">save $60</div>
 		</div>
 	</div>
-	<!-- <div class="line"></div>	
-	<div class="subtitle">VIP MEMBERSHIP</div>
-	<div class="gift-headline">Come in for 9 blowouts and the next one is on us along with a 10% discount on all our products.</div> -->
+	<div class="line"></div>	
+	<!-- <div class="subtitle">VIP MEMBERSHIP</div>
+	<div class="gift-headline">Come in for 9 blowouts and the next one is on us along with a 10% discount on all our products.</div>
 	<div class="styles-cont vip">
+	</div> -->
+	<div id="form-cont">
+		<div class="title">order a gift certificate</div>
+		<div class="text">Please fill out the information below and we will get in touch with you within 24 hours to deliver the gift certificate.</div>
+		<div id="contact-form">
+			<?php echo do_shortcode( '[contact-form-7 id="238" title="Gift certificate"]' ); ?>
+		</div>
 	</div>
+	
 </div>
