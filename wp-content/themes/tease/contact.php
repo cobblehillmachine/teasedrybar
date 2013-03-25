@@ -13,7 +13,7 @@ get_header(); ?>
 	</a>
 	<div class="other">
 		<div class="title">book</div>
-		<div class="text">Last minute function or plans for a night on the town? No worries.  We are here within a moments notice or feel free to book an appointment. <a href="http://www.oursalononline.com/Online/%28S%28qnhn1p45e5dozkevaegpzib4%29%29/book.aspx?acc=teasedrybar" target="_blank">Click here to book an appointment</a></div>
+		<div class="text">Function or plans for a night on the town? No worries.<br/> Please give us a call at 843-724-9493 <br/>or <a href="http://www.oursalononline.com/Online/%28S%28qnhn1p45e5dozkevaegpzib4%29%29/book.aspx?acc=teasedrybar" target="_blank">click here to book an appointment</a></div>
 		<div class="title">subscribe</div>
 		<div class="text">Join our mailing list and keep up with latest at Tease, and to receive special offers for your next blowout.</div>
 		<div class="subscribe-cont">
@@ -22,7 +22,7 @@ get_header(); ?>
 	</div>
 	<div id="form-cont">
 		<div class="title">get in touch</div>
-		<div class="text">There’s no appointment needed to visit Tease Dry Bar, but if you’d like to get in contact with us please use the form below.</div>
+		<div class="text">If you would like to get in contact with us or have any comments, please use the form below.  We would love to hear from you!</div>
 		<div id="contact-form">
 			<?php echo do_shortcode( '[contact-form-7 id="28" title="Contact form 1"]' ); ?>
 		</div>
