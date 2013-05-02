@@ -4,7 +4,7 @@ body {margin:0; padding:0; color:#fff; overflow-y:auto; background:url(../images
 .freight-book {font-family: "freight-sans-pro",sans-serif; font-style: normal; font-weight: 400;}
 .page-title {position:relative; top:-2px; background:url(../images/half-circle.png) no-repeat; z-index:2;
 	width:240px; height:50px; margin-left:270px; padding-top:20px; font-size:14px; text-transform:uppercase; text-align:center; font-weight:700; letter-spacing:1.5px;}
-#about, #menu, #news, #contact, #gifts {width:774px; position:absolute; top:0; left:280px; font:normal 14px "freight-sans-pro";
+#about, #menu, #news, #contact, #gifts, #primary {width:774px; position:absolute; top:0; left:280px; font:normal 14px "freight-sans-pro";
  letter-spacing:1px; background:#2c2c2c; padding-right:40px; line-height:22px;}
 .line {position:relative; float:left; width:774px; height:1px; background:#bcbcbc; margin-bottom:50px;}
 .white-bullet {position:relative; float:left;}

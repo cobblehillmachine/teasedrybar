@@ -1,0 +1,53 @@
+@media only screen and (min-device-width: 768px) and (max-device-width: 991px) {
+#contact .directions {display:none;}
+.submit-btn  input[type=submit] {-webkit-appearance: none;}
+#header .small-cont, .page-title, .feature-cont, .bottom-menu, #header .header-text {display:none;}
+#about, #menu, #news, #contact, #gifts {position:relative; float:left; width:768px; left:0; padding:0;}
+.wrapper {height:auto !important; min-height:750px;}
+
+	/*HEADER*/
+#header {width:768px; height:auto !important;}
+#header #mobile-tab {display:block; position:absolute; bottom:-31px; left:360px; width:50px; height:31px; background:url(../images/mobile-tab.png) 0 0 no-repeat;}
+#header #logo {margin-bottom:0; -webkit-touch-callout: none;}
+	
+	/*	HOME*/
+.header-cont {margin:0; padding: 0 0 30px 240px;}
+#home, .cycloneslider img {position:relative; float:left; left:0 !important; height:750px !important;}
+#home-circle {display:block !important; left:260px !important;}
+
+	/*ABOUT*/
+.main-image img {width:768px !important; height:450px !important;}
+.page-content {position:relative; float:left; width:768px;}	
+.about-text, #news .post-text, #news .post-content {width:713px !important;}
+.text-title, #news .title, #news .date {width:668px !important;}
+
+	/*NEWS*/
+#news .line {width:768px;}
+#news .post-content {margin:45px 0 20px 20px;}
+
+	/*CONTACT*/
+#contact .form-cont, #contact-form, #contact .comment-cont, #contact .text, #contact textarea {width:713px !important;}
+#map-img img {height:500px !important;}
+#contact .submit-btn {float:left;}
+#contact .input-cont {margin-right:10px;}
+#contact textarea {width:700px !important;}
+#emma_signup {max-width:250px;}
+
+	/*MENU & GIFTS*/
+#menu .subtitle-cont, #gifts .subtitle-cont {margin-top:50px;}
+#menu .specialty .style-single {margin-left:15px !important;}
+#menu .line, #gifts .line {width:768px;}
+#gifts .first {margin-top:50px;}
+#gifts .input-cont {margin-right:10px;}
+
+	/*STYLES PAGE*/
+.styles-page {position:relative; float:left; left:0 !important;}	
+.styles-menu, #styles-circle .instruction span, #styles-circle .instruction .desktop {display:none !important;}
+.bgimg, .cycloneslider, .cycloneslider-slides {width:768px !important; height:600px !important;}
+#styles-circle {background:#ef4030; width:768px; height:150px; position:relative; float:left; display:block !important; left:0 !important; top:0 !important;}
+#styles-circle .title {margin-top: 20px;}
+#styles-circle .instruction {margin-top:20px; margin-left:0px; width:100%; text-align:center;}
+#styles-circle .instruction .ios {display:block;}
+.cycloneslider-prev, .cycloneslider-next {position:absolute !important; }
+.cycloneslider-template-default .cycloneslider-prev  {left:10px !important;}
+}

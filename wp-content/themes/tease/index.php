@@ -13,7 +13,6 @@
  */
 
 get_header(); ?>
-
 		<div id="news" class="wrapper">
 			<div class="page-title">NEWS</div>
 
