@@ -6,7 +6,7 @@
 .cycloneslider-template-default .cycloneslider-next{
     display:none;
     opacity:0;
-    position:fixed;
+    position:absolute;
     top:50%;
     margin-top:-22px;
     z-index:102;
@@ -15,14 +15,13 @@
     text-indent:-99999px;
     background: url($tpl/images/sprite-arrows.png) no-repeat;
 }
-
 .cycloneslider-template-default:hover .cycloneslider-prev,
 .cycloneslider-template-default:hover .cycloneslider-next{
     display:block;
     opacity:0.4;
 }
 .cycloneslider-template-default .cycloneslider-prev{
-    left:290px;
+    left:10px;
     background-position:0 0;
 }
 .cycloneslider-template-default .cycloneslider-next{

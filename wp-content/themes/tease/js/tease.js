@@ -1,9 +1,11 @@
 var currentUrl = window.location.pathname;
 
 $(document).ready(function() {
+	$('.emma-form-label-required').remove();
 	headerHeight();
 	fullScreen();
-
+	$('.emma-form-label').addClass('input-label');
+	$('.emma-form-label').html('EMAIL');
 	$('img[title]').each(function() { $(this).removeAttr('title'); });
 	//$('').each(function() { $(this).str.replace('p' , 'div'); });
 	$('.single-text p').replaceWith(function(){

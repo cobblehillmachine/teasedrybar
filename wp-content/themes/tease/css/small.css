@@ -1,4 +1,4 @@
-@media screen and (max-device-width: 320px) {
+@media screen and (max-device-width: 480px) {
 
 #header .small-cont, .page-title, .feature-cont, .bottom-menu, #header .header-text {display:none;}
 #about, #menu, #news, #contact, #gifts {position:relative; float:left; width:320px; left:0; padding:0; line-height:18px;}
@@ -32,9 +32,12 @@
 #contact .directions {display:none;}
 #map-img img {height:300px !important;}
 #contact .submit-btn {float:left;}
-.submit-btn  input[type=submit] {-webkit-appearance: none;}
+.submit-btn  input[type=submit] {-webkit-appearance: none; width:265px;}
 #emma_signup {max-width:250px; width:250px;}
 #contact .emma-submit {margin:15px 0 0 0px;}
+#emma-email {width:172px;}
+.input-cont {width:100% !important;}
+input[type="text"], input[type="email"], textarea {width:100%;}
 
 
 

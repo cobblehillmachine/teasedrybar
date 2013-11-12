@@ -1,11 +1,10 @@
 <?php
 
-
 include_once('admin/class-emma-settings.php');
-include_once('widget/class-widget.php');
-include_once('shortcode/class-shortcode.php');
+include_once('widget/class-emma-widget.php');
+include_once('shortcode/class-emma-shortcode.php');
 include_once('class-emma-api.php');
-include_once('class-form.php');
+include_once('class-emma-form.php');
 
 /**
  * Main Class for the Emma Emarketing Plugin

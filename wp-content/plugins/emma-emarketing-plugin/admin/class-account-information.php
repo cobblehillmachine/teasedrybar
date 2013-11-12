@@ -27,7 +27,7 @@ class Account_Information {
 
     public static function get_settings_defaults() {
         $defaults = array(
-            'plugin_version' => '1.0',
+            'plugin_version' => '1.0.5',
             'account_id' => '',
             'publicAPIkey' => '',
             'privateAPIkey' => '',

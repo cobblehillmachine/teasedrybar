@@ -407,5 +407,4 @@ function my_theme_wrapper_end() {
 }
 add_theme_support( 'woocommerce' );
 
-?>
 

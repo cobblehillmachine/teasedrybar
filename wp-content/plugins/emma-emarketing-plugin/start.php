@@ -3,8 +3,8 @@
 /**
  * Plugin Name: Emma Emarketing Plugin
  * Plugin URI: http://ahsodeisgns.com/wordpress-plugins/emma-emarketing
- * Description: This Plugin has a Widget and a Shortcode that creates a subscription form for Emma,
- * Version: 1.0.4
+ * Description: The Emma Emarketing plugin allows you to quickly and easily add a signup form for your Emma list as a widget or a shortcode.
+ * Version: 1.0.5
  * Author: Ah So
  * Author URI: http://ahsodesigns.com
  * Contributors: ahsodesigns
@@ -29,8 +29,8 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-// setup proxy for sir charles the vase
-//define('WP_PROXY_HOST','localhost');
+// proxy for debugging emma API calls
+//define('WP_PROXY_HOST','192.168.1.7');
 //define('WP_PROXY_PORT','8888');
 
 define( 'EMMA_EMARKETING_PATH',     dirname( __FILE__ ) );

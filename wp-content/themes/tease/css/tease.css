@@ -10,6 +10,8 @@ body {margin:0; padding:0; color:#fff; overflow-y:auto; background:url(../images
 .white-bullet {position:relative; float:left;}
 a img {border:0;}
 .bgimg {display:none;}
+ul, li {list-style:none; padding:0; margin:0;}
+input, textarea {-webkit-border-radius:0px; -webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
 /*HEADER*/
 #header {position:relative; float:left; width:280px; background:#ef4030; height:100%; font:normal 12px "freight-sans-pro"; z-index:10; letter-spacing:1.5px;}
@@ -136,18 +138,29 @@ a img {border:0;}
 #contact #contact-form {position:relative; float:left; width:750px; margin-bottom:50px;}
 #contact .input-cont {position:relative; float:left; width:230px; margin:0 30px 25px 0;}
 #contact .comment-cont {position:relative; float:left; width:750px;}
-#contact .form-input {position:relative; float:left; width:215px; height:40px; background:#5f5f5f; border:none; padding-left:10px; color:#000;}
-#contact textarea {width:740px !important; height:160px !important; padding-top:10px; font:normal 13px "freight-sans-pro"; resize:none;}
+input[type="text"], input[type="email"], textarea {position:relative; float:left; width:225px; height:40px; background:#5f5f5f; border:none; padding-left:10px; color:#000;}
+#contact textarea {width:745px !important; height:160px !important; padding-top:10px; font:normal 13px "freight-sans-pro"; resize:none;}
 #contact .input-label {position:relative; float:left; font-size:13px; margin-bottom:5px; width:100%;}
 #contact #contact-form .last {margin-right:0px !important;}
 #contact .submit-btn {position:relative; float:right; margin-top:15px;}
-#contact .submit-btn input {border:none; background:#ef4030; color:#fff; font-size:15px; padding:15px 80px; cursor:pointer;}
+#contact input[type="submit"] {border:none; background:#ef4030; color:#fff; font-size:15px; padding:15px 80px; cursor:pointer;}
 #contact .submit-btn input:hover {background:#000;}
 #contact .other a {color:#fff;}
 #contact .other a:hover {text-decoration:none; color:#ef4030;}
 #contact .subscribe-cont {position:relative; float:left; width:100%;}
-#contact .emma-submit input {font-size:13px !important; padding:0px 12px !important; height:42px; position:relative; float:left;}
+#contact #emma-form input[type="submit"] {font-size:13px !important; padding:0px 12px !important; height:42px; position:relative; float:left; margin-left:15px;}
 #contact .emma-submit {margin:0 0 0 15px; float:left !important;}
 #contact .emma-status {position:relative; float:left; width:100%; margin-top:10px; color:#fff;}
 #contact .submit-btn  input[type=submit] {-webkit-appearance: none;}
+#contact div.wpcf7-validation-errors, #gifts div.wpcf7-validation-errors {float:left; border:none;}
+#contact div.wpcf7-response-output, #gifts div.wpcf7-response-output {margin:5px 0 0 4px; padding:0; color:#EF4030;}
+#contact span.wpcf7-not-valid-tip-no-ajax, #gifts span.wpcf7-not-valid-tip-no-ajax {color:#EF4030;}
+
+/*FOR SHOP*/
+#custom .add_to_cart_button, .custom-link {display:none;}
+#custom .custom-link {display:block;}
+
+
+
+
 

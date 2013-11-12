@@ -35,13 +35,15 @@ class Form_Setup {
             'lastname_placeholder' => '',
             'submit_txt' => 'Subscribe',
             'confirmation_msg' => 'Thanks for subscribing! you should receive a confirmation email shortly. Please check your spam folder, as occasionally this email may be perceived as spam',
-            'powered_by' => 'no'
+            'powered_by' => 'no',
+            'send_confirmation_email' => '1',
+            'confirmation_email_subject' => 'You&apos;re recent subscription to Emma',
+            'confirmation_email_msg' => 'Thanks for subscribing! This email confirms that you now have an active subscription to our newsletter!',
         );
         return $defaults;
     }
 
     function register_settings() {
-
 
         register_setting( self::$key, self::$key, array( &$this, 'sanitize_form_setup_settings' ) );
 
@@ -61,12 +63,61 @@ class Form_Setup {
         add_settings_field( 'submit_button_text', 'Submit Button Text', array( &$this, 'field_submit_txt' ), self::$key, 'section_form_placeholders' );
         add_settings_field( 'confirmation_msg', 'Confirmation Message', array( &$this, 'field_confirmation_msg' ), self::$key, 'section_form_placeholders' );
 
+        add_settings_section( 'section_confirmation_email', 'Confirmation Email', array( &$this, 'section_confirmation_email_desc' ), self::$key );
+        add_settings_field( 'send_confirmation_email', 'Send Confirmation Email?', array( &$this, 'field_send_confirmation_email' ), self::$key, 'section_confirmation_email' );
+        add_settings_field( 'confirmation_email_subject', 'Confirmation Email Subject', array( &$this, 'field_confirmation_email_subject' ), self::$key, 'section_confirmation_email' );
+        add_settings_field( 'confirmation_email_textarea', 'Confirmation Email Message', array( &$this, 'field_confirmation_email_textarea' ), self::$key, 'section_confirmation_email' );
+
         add_settings_section( 'section_powered_by', 'Give Props', array( &$this, 'section_powered_by_desc'), self::$key );
         add_settings_field( 'powered_by', 'Add "Powered By Emma" Link', array( &$this, 'field_powered_by'), self::$key, 'section_powered_by' );
 
         // form preview
         // add_settings_field( 'form_preview', 'Form Preview', array( &$this, 'field_form_preview' ), self::$key, 'section_form_placeholders' );
     }
+
+    function section_confirmation_email_desc() {
+        echo '<p>Configure the confirmation email</p>';
+    }
+
+    function field_send_confirmation_email() { ?>
+        <label for="send_confirmation_email_yes">Yes</label>
+        <input id="send_confirmation_email_yes"
+           type="radio"
+           name="<?php echo self::$key; ?>[send_confirmation_email]"
+           value="1" <?php checked( '1', ( self::$settings['send_confirmation_email'] ) ); ?>
+        />
+        <label for="send_confirmation_email_no">No</label>
+        <input id="send_confirmation_email_no"
+               type="radio"
+               name="<?php echo self::$key; ?>[send_confirmation_email]"
+               value="0" <?php checked( '0', ( self::$settings['send_confirmation_email'] ) ); ?>
+                />
+    <?php }
+
+    function field_confirmation_email_subject() { ?>
+
+        <input id="confirmation_email_subject"
+           type="text"
+           size="100"
+           name="<?php echo self::$key; ?>[confirmation_email_subject]"
+           value="<?php echo esc_attr( self::$settings['confirmation_email_subject'] ); ?>"
+            />
+    <?php }
+
+    function field_confirmation_email_textarea() { ?>
+
+        <textarea id="confirmation_email_msg"
+              name="<?php echo self::$key; ?>[confirmation_email_msg]"
+              rows="6"
+              cols="40" >
+        <?php
+        // avoid undefined index by checking for the value 1st, then assigning it nothing if it has not been set.
+        $confirmation_email_msg = isset( self::$settings['confirmation_email_msg'] ) ? esc_attr( self::$settings['confirmation_email_msg'] ) : '';
+        echo $confirmation_email_msg;
+        ?>
+        </textarea>
+
+    <?php }
 
     function section_form_field_includes_desc() {  }
     function field_include_firstname_lastname() { ?>
@@ -217,6 +268,9 @@ class Form_Setup {
             $valid_input['submit_txt']                  = wp_kses( $input['submit_txt'], '' );
             $valid_input['confirmation_msg']            = wp_kses( $input['confirmation_msg'], '' );
             $valid_input['powered_by']                  = $input['powered_by'];
+            $valid_input['send_confirmation_email']     = $input['send_confirmation_email'];
+            $valid_input['confirmation_email_subject']  = wp_kses( $input['confirmation_email_subject'], '' );
+            $valid_input['confirmation_email_msg']      = wp_kses( $input['confirmation_email_msg'], '' );
 
         } elseif ( $reset ) {
 

@@ -6,7 +6,7 @@ Author URI: http://ahsodesigns.com
 Plugin URI: http://www.ahsodesigns.com/products/emma-emarketing-plugin/
 Requires at least: 3.1
 Tested up to: 3.4.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,8 @@ The plugin will now be able to connect your WordPress site to your Emma account.
 
 <strong>Form placeholders</strong> is where your default text goes for the fields on the form.
 
+<strong>Custom Confirmation Email Message</strong> you can specify a short email message to be sent to the subscriber.
+
 <strong>Give props</strong> is where you can choose whether or not to display the Emma logo on your site.  The default setting is no.
 
 &nbsp;
@@ -80,31 +82,34 @@ To insert the form as a <strong>shortcode</strong> within your site, insert &#91
 == Screenshots ==
 
 1. This is the Account Information tab of the plugin settings, here you enter your account keys and account number, then select the group you wish to add members to.
-2. This is the Form Setup tab of the plugin settings, here you configure the form's output on your site, you can also choose to add a stylish emma logo to your form, and share some love. 
+2. This is the Form Setup tab of the plugin settings, here you configure the form's output on your site, you can also choose to add a stylish emma logo to your form, and share some love.
 3. This is the Form Customization tab of the plugin settings, here you can style your form, choose colors, border types, and so on.
 4. This is the Help tab of the plugin settings, it contains instructions on how to get up and running with your new Emma Emarketing WordPress Plugin.
 
 == Frequently Asked Questions ==
 
-1. How do i put the form on my website?
+1. How do I put the form on my website?
    - Once you have activated the plugin, setup your Emma account to work with their new API, and configured your Emma Emarketing Settings, navigate to Appearance->Widgets. This plugin comes with a widget called 'Emma Emarketing Subscription Form'. The Widgets are listed in alphabetical order.
 
-2. How do i add memnbers to a specific group?
+2. How do I add memnbers to a specific group?
    - Once you've configured the plugin, and entered your account ID, Private and Public API keys,
    a select menu with the available groups for your account will show at the bottom of the account information tab
    on the Emma Emarketing Settigns page in the Wordpress admin.
    simply select the group you want members to be added to and click 'Save'.
 
 3. How do i use the shortcode?
-   - if you only want the form on a single page, you can use the shortcode, simply type [emma_form] in the HTML view in the post editor, for more information on shortcodes, check the almighty codex: [Shortcodes](http://codex.wordpress.org/Shortcode" WordPress Codex - Shortcodes")
+   - If you only want the form on a single page, you can use the shortcode, simply type [emma_form] in the HTML view in the post editor, for more information on shortcodes, check the almighty codex: [Shortcodes](http://codex.wordpress.org/Shortcode" WordPress Codex - Shortcodes")
 
 == Upgrade Notice ==
 
-1. Plugin now uses basic OOP techniques.
 2. This Plugin requires Wordpress version 3.1 and above
 3. This Plugin requires PHP version 5.2.6, as it uses json_encode with integers in the Emma_API class
 
 == Changelog ==
+
+- v 1.0.5 - added confirmation email message, nomenclature updates, Emma_API class fixes, relegated error handling to object making the call, Emma_API fits the adapter pattern better now. more bugfixes.
+
+- v 1.0.4 - bugfixes, updated readme.txt
 
 - v 1.0.3 - fixed accidental php short tag, ( tyty @avioli ), updated readme.txt, spelling errors, and nomenclature updates.
 

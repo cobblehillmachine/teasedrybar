@@ -2,15 +2,15 @@
 <div class="cycloneslider cycloneslider-template-responsive" id="cycloneslider-<?php echo $slider_id; ?>">
 	<div class="cycloneslider-slides">
 		<img src="<?php echo cycloneslider_trans($slider_settings['width'], $slider_settings['height']); ?>" alt="" />
-		<?php foreach($slides as $i=>$slide): ?>
+		<?php foreach($slider_metas as $i=>$slider_meta): ?>
 			<div class="cycloneslider-slide">
-				<?php if ($slider_metas[$i]['link']!='') : ?><a href="<?php echo $slider_metas[$i]['link'];?>"><?php endif; ?>
-				<img class="slide" src="<?php echo $slide; ?>" alt="" />
-				<?php if ($slider_metas[$i]['link']!='') : ?></a><?php endif; ?>
-				<?php if(!empty($slider_metas[$i]['title']) or !empty($slider_metas[$i]['description'])) : ?>
+				<?php if ($slider_meta['link']!='') : ?><a target="<?php echo ('_blank'==$slider_meta['link_target']) ? '_blank' : '_self'; ?>" href="<?php echo $slider_meta['link'];?>"><?php endif; ?>
+				<img src="<?php echo cycloneslider_thumb($slider_meta['id'], $slider_settings['width'], $slider_settings['height'], false, $slider_meta); ?>" alt="slide" />
+				<?php if ($slider_meta['link']!='') : ?></a><?php endif; ?>
+				<?php if(!empty($slider_meta['title']) or !empty($slider_meta['description'])) : ?>
 				<div class="cycloneslider-caption">
-					<div class="cycloneslider-caption-title"><?php echo $slider_metas[$i]['title'];?></div>
-					<div class="cycloneslider-caption-description"><?php echo $slider_metas[$i]['description'];?></div>
+					<div class="cycloneslider-caption-title"><?php echo $slider_meta['title'];?></div>
+					<div class="cycloneslider-caption-description"><?php echo $slider_meta['description'];?></div>
 				</div>
 				<?php endif; ?>
 			</div>
@@ -36,7 +36,8 @@ jQuery(document).ready(function(){
 			prev: jQuery(slider+' .cycloneslider-prev'),
 			next: jQuery(slider+' .cycloneslider-next'),
 			slideExpr: '.cycloneslider-slide',
-			slideResize: false
+			slideResize: false,
+			pause:<?php echo $slider_settings['hover_pause']; ?>
 		});
 	})();
 });
