@@ -9,7 +9,7 @@ get_header(); ?>
 	<div class="page-title"><?php the_title(); ?></div>
 	<div class="subtitle first">SPLURGE, <span>A Full Month of Tease</span></div>
 	<!-- <div class="gift-headline">Blow someone away with a gift certificate from Tease. They make a great gift for yourself or a special friend.</div> -->
-	<?php echo do_shortcode('[product_category category="Splurge" per_page="12" columns="4" orderby="date" order="desc"]'); ?>
+	<div id="splurge"><?php echo do_shortcode('[product_category category="Splurge" per_page="12" columns="4" orderby="date" order="desc"]'); ?></div>
 	<!-- <div class="styles-cont splurge">		
 			<div class="style-single">
 					<div class="single-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/gift-price-75.png" /></div>	
@@ -28,7 +28,7 @@ get_header(); ?>
 	
 	<div class="subtitle">TEASE TABS</div>
 	<!-- <div class="gift-headline">Buy a bunch of blowouts at once, we’ll keep track of them and take them off your tab each time you come in.<br/> These never expire.</div> -->
-	<?php echo do_shortcode('[product_category category="Tease Tabs" per_page="12" columns="4" orderby="date" order="desc"]'); ?>
+	<div id="tease-tabs"><?php echo do_shortcode('[product_category category="Tease Tabs" per_page="12" columns="4" orderby="date" order="desc"]'); ?></div>
 	<!-- <div class="styles-cont tabs">	
 		<div class="style-single">
 				<div class="single-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/gift-price-100.png" /></div>	

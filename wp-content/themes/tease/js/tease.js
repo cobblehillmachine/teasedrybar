@@ -72,6 +72,7 @@ function headerHeight(){
 	winH = $(window).height();
 header.css({'height':windowHeight});
 $('.wrapper').css({'height':windowHeight});
+$('.cycloneslider-slide, .cycloneslider-slides').css({'height':windowHeight});
 	// if(winH >= 850){
 	// 	$('body').css('overflow', 'hidden');
 	// } else if 	(winH < 850){

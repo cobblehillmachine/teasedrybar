@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 */
 	 do_action( 'woocommerce_before_single_product' );
 ?>
-
+	<div class="subtitle">MONEY TO BLOW, <span>Gift Certificate</span></div>
 <div itemscope itemtype="http://schema.org/Product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php
@@ -33,8 +33,17 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="summary entry-summary">
-
+	<div id="product-info" class="summary entry-summary">
+		<?php
+			/**
+			 * woocommerce_after_single_product_summary hook
+			 *
+			 * @hooked woocommerce_output_product_data_tabs - 10
+			 * @hooked woocommerce_output_related_products - 20
+			 */
+			do_action( 'woocommerce_after_single_product_summary' );
+		?>
+		
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook
@@ -51,15 +60,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	</div><!-- .summary -->
 
-	<?php
-		/**
-		 * woocommerce_after_single_product_summary hook
-		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_output_related_products - 20
-		 */
-		do_action( 'woocommerce_after_single_product_summary' );
-	?>
 
 </div><!-- #product-<?php the_ID(); ?> -->
 

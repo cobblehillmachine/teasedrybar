@@ -11,14 +11,15 @@ body {margin:0; padding:0; color:#fff; overflow-y:auto; background:url(../images
 a img {border:0;}
 .bgimg {display:none;}
 ul, li {list-style:none; padding:0; margin:0;}
-input, textarea {-webkit-border-radius:0px; -webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-
+input, textarea, .button {-webkit-border-radius:0px; -webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.button:hover {background:#000;}
 /*HEADER*/
 #header {position:relative; float:left; width:280px; background:#ef4030; height:100%; font:normal 12px "freight-sans-pro"; z-index:10; letter-spacing:1.5px;}
 #header div, #header a {position:relative; float:left; width:100%; text-align:center;}
 #header .header-cont {width:180px; margin:50px 0px 30px 55px;}
 /*#header #logo {margin-bottom:50px; background:url(../images/logo.png) no-repeat; width:155px; height:75px;}*/
 #header #logo {margin-bottom:45px; height:72px;}
+#header #logo img {width:152px;}
 #header #logo img:hover {width:147px; height:67px; margin-bottom:50px;}
 #header .header-text {font-size:12px; text-transform:uppercase; margin-bottom:35px;}
 #header .header-links {font-size:14px; text-transform:uppercase; margin-bottom:20px; color:#fff; text-decoration:none; letter-spacing:.75px;}
@@ -57,7 +58,7 @@ input, textarea {-webkit-border-radius:0px; -webkit-appearance:none; -moz-appear
 #menu .page-title, #gifts .page-title {margin-bottom:70px;}
 #menu .subtitle-cont, #gifts .subtitle-cont {position:relative; float:left; text-align:center; margin-left:25%;}
 #menu .subtitle, #gifts .subtitle {font-size:24px; position:relative; float:left; margin-bottom:25px;  width:100%; text-align:center;}
-#gifts .subtitle {margin-bottom:15px !important;}
+/*#gifts .subtitle {margin-bottom:15px !important;}*/
 #menu .subtitle-text, #gifts .subtitle-text {font-size:24px; position:relative; float:left;}
 #menu .italic, #gifts .italic {font-size:20px; position:relative; float:left; margin:4px; font-family: "adobe-caslon-pro",serif; font-style: italic; font-weight: 400; text-transform:capitalize;}
 #menu .subtitle span, #gifts .subtitle span {font-family: "adobe-caslon-pro",serif; font-style: italic; font-weight: 400; font-size:20px; text-transform:capitalize;}
@@ -70,8 +71,8 @@ input, textarea {-webkit-border-radius:0px; -webkit-appearance:none; -moz-appear
 #menu .single-title, #gifts .single-title {font-size:18px; position:relative; float:left; margin:10px 0; width:100%; text-transform:uppercase;}
 #menu .single-text, #gifts .single-text {position:relative; float:left; font-size:14px; width:100%;}
 #menu .single-text i {font-family: "adobe-caslon-pro",serif; font-style: italic; font-weight: 600; letter-spacing:.5px;}
-#menu .price, #gifts .price {position:relative; float:left; font:normal 24px 'Didot'; width:100%; margin-bottom:10px;}
-#menu .price span, #gifts .price span {font-size:14px; position:absolute; top:2px; left:64px;}
+#menu .price {position:relative; float:left; font:normal 24px 'Didot'; width:100%; margin-bottom:10px;}
+#menu .price span {font-size:14px; position:absolute; top:2px; left:64px;}
 #menu .style-link, #gifts .style-link {position:relative; float:left; color:#fff; text-decoration:none; width:100%; font-size:11px; text-transform:uppercase; margin-top:5px;
  font-family: "freight-sans-pro",sans-serif; font-style: normal; font-weight: 700; letter-spacing:1.5px;}
 #menu .style-link:hover {text-decoration:none; color:#acacac;}
@@ -157,10 +158,19 @@ input[type="text"], input[type="email"], textarea {position:relative; float:left
 #contact span.wpcf7-not-valid-tip-no-ajax, #gifts span.wpcf7-not-valid-tip-no-ajax {color:#EF4030;}
 
 /*FOR SHOP*/
-#custom .add_to_cart_button, .custom-link {display:none;}
-#custom .custom-link {display:block;}
+#custom .add_to_cart_button, .custom-link, .custom-gift {display:none;}
+#custom .custom-link, #custom .custom-gift {display:block;}
+#gifts .subtitle {margin-bottom:35px;}
+#gifts .products li {width:230px; margin-left:28px; float:left; text-align:center; margin-bottom:50px;}
+#gifts .products .price {float:left; background:url(../images/gift-price.png) no-repeat center 0; width:100%; height:67px; margin-bottom:12px;}
+#gifts .products .price .amount {color:#ef4030; font:normal 22px 'Didot'; float:left; width:100%; text-align:center; margin-top:20px;}
+#gifts .products .product-info {font-style:italic;}
+#gifts .products .product-title {font-size:18px; text-transform:uppercase;}
+.button {background:#ef4030; color:#fff; font-size:15px; padding:15px 0; text-decoration:none; text-transform:uppercase; float:left; width:100%;}
+#splurge .products li:first-child {margin:0 115px 50px;}
+#custom .products li {margin-left:285px;}
 
-
-
+/*SINGLE GIFT CERTIF*/
+#product-info {float:left;}
 
 

@@ -38,7 +38,9 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 <li <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
-
+	<span class="custom-gift price">
+		<span class=" amount">$...</span>
+	</span>
 		<?php
 			/**
 			 * woocommerce_after_shop_loop_item_title hook
@@ -48,9 +50,10 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 			do_action( 'woocommerce_after_shop_loop_item_title' );
 		?>
 
-		<h3><?php the_title(); ?></h3>
+		<div class="product-title"><?php the_title(); ?></div>
+		<div class="product-info"><?php the_content(); ?></div>
 
-		<a class="custom-link" href="<?php the_permalink(); ?>">CUSTOMIZE</a>
+		<a class="custom-link button" href="<?php the_permalink(); ?>">CUSTOMIZE</a>
 
 
 

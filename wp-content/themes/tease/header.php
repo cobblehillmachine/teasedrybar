@@ -117,9 +117,9 @@
 				<a id="contact-link" href="/contact" class="freight-bold header-links">contact</a>
 				<div class="bottom-menu">
 					<div class="dryer-img"><img src="<?php echo get_template_directory_uri(); ?>/images/blow-dry.png" /></div>
-					<div class="freight-medium header-text">no appointment needed</div>
+					<!-- <div class="freight-medium header-text">no appointment needed</div> -->
 					<div class="freight-medium address hours">
-						Mon 10-5</br>
+						Mon Closed</br>
 						Tues thru Sat 10-7</br>
 						Sun 12-5
 					</div>
