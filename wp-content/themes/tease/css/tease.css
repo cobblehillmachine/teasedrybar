@@ -1,17 +1,19 @@
-body {margin:0; padding:0; color:#fff; overflow-y:auto; background:url(../images/pattern-tile.jpg) repeat;}
+body {margin:0; padding:0; color:#fff; overflow-y:auto; background:url(../images/pattern-tile.jpg) repeat; font-family: "freight-sans-pro",sans-serif; font-style: normal;}
 .freight-medium {font-weight:400;}
 .freight-bold {font-weight:700;}
 .freight-book {font-family: "freight-sans-pro",sans-serif; font-style: normal; font-weight: 400;}
 .page-title {position:relative; top:-2px; background:url(../images/half-circle.png) no-repeat; z-index:2;
 	width:240px; height:50px; margin-left:270px; padding-top:20px; font-size:14px; text-transform:uppercase; text-align:center; font-weight:700; letter-spacing:1.5px;}
-#about, #menu, #news, #contact, #gifts, #primary {width:774px; position:absolute; top:0; left:280px; font:normal 14px "freight-sans-pro";
+#about, #menu, #news, #contact, #gifts, #primary, #main {width:774px; position:absolute; top:0; left:280px; font:normal 14px "freight-sans-pro";
  letter-spacing:1px; background:#2c2c2c; padding-right:40px; line-height:22px;}
 .line {position:relative; float:left; width:774px; height:1px; background:#bcbcbc; margin-bottom:50px;}
 .white-bullet {position:relative; float:left;}
 a img {border:0;}
+a, select {outline:0;}
 .bgimg {display:none;}
 ul, li {list-style:none; padding:0; margin:0;}
-input, textarea, .button {-webkit-border-radius:0px; -webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+input, textarea, .button, select {-webkit-border-radius:0px; -webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; resize:none;}
+#news #nav-below {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .button:hover {background:#000;}
 /*HEADER*/
 #header {position:relative; float:left; width:280px; background:#ef4030; height:100%; font:normal 12px "freight-sans-pro"; z-index:10; letter-spacing:1.5px;}
@@ -36,7 +38,7 @@ input, textarea, .button {-webkit-border-radius:0px; -webkit-appearance:none; -m
 #header #pinterest {background:url(../images/pinterest.gif) no-repeat;}
 #header #instagram {margin-right:0 !important; background:url(../images/instagram.gif) no-repeat;}
 #header .site-credit {position:relative; float:left; width:100%; margin-top:30px; text-transform:uppercase; color:#fff; text-decoration:none;}
-#header #mobile-tab {display:none; position:absolute; bottom:-31px; width:48px; height:31px; background:url(../images/mobile-tab.png) 50% 0 no-repeat;}
+#header #mobile-tab {display:none;}
 
 /*HOMEPAGE*/
 #home {position:fixed; top:0; left:280px; width:100%;}
@@ -57,11 +59,10 @@ input, textarea, .button {-webkit-border-radius:0px; -webkit-appearance:none; -m
 /*MENU*/   /*GIFT CERTIFICATES*/
 #menu .page-title, #gifts .page-title {margin-bottom:70px;}
 #menu .subtitle-cont, #gifts .subtitle-cont {position:relative; float:left; text-align:center; margin-left:25%;}
-#menu .subtitle, #gifts .subtitle {font-size:24px; position:relative; float:left; margin-bottom:25px;  width:100%; text-align:center;}
-/*#gifts .subtitle {margin-bottom:15px !important;}*/
+.subtitle {font-size:24px; position:relative; float:left; margin-bottom:25px;  width:100%; text-align:center;}
 #menu .subtitle-text, #gifts .subtitle-text {font-size:24px; position:relative; float:left;}
 #menu .italic, #gifts .italic {font-size:20px; position:relative; float:left; margin:4px; font-family: "adobe-caslon-pro",serif; font-style: italic; font-weight: 400; text-transform:capitalize;}
-#menu .subtitle span, #gifts .subtitle span {font-family: "adobe-caslon-pro",serif; font-style: italic; font-weight: 400; font-size:20px; text-transform:capitalize;}
+.subtitle span {font-family: "adobe-caslon-pro",serif; font-style: italic; font-weight: 400; font-size:20px; text-transform:capitalize;}
 #menu .didot, #gifts .didot {font-family:'Didot'; font-size:60px; position:relative; float:left; margin:7px 15px 0 0;}
 #menu .dollar, #gifts .dollar {font-size:35px; position:relative; float:left; font-family:'Didot'; margin-top:-5px}
 #menu .styles-cont, #gifts .styles-cont {position:relative; float:left; width:100%; margin-bottom:45px;}
@@ -124,7 +125,7 @@ input, textarea, .button {-webkit-border-radius:0px; -webkit-appearance:none; -m
 #news .post-text {position:relative; float:left;}
 #news .post-text a {color:#fff;}
 #news .post-text a:hover {text-decoration:none; color:#ef4030;}
-#news #nav-below {position:relative; float:left; width:100%; margin-top:10px; }
+#news #nav-below {position:relative; float:left; width:100%; margin-top:10px; padding:0 25px 40px 0;}
 #news #nav-below .slash {position:relative; float:left; margin:0 15px;}
 #news .nav-previous, #news .nav-next {float:right;}
 #news .nav-previous a, #news .nav-next a {color:#fff; text-transform:uppercase; text-decoration:none;} 
@@ -139,7 +140,7 @@ input, textarea, .button {-webkit-border-radius:0px; -webkit-appearance:none; -m
 #contact #contact-form {position:relative; float:left; width:750px; margin-bottom:50px;}
 #contact .input-cont {position:relative; float:left; width:230px; margin:0 30px 25px 0;}
 #contact .comment-cont {position:relative; float:left; width:750px;}
-input[type="text"], input[type="email"], textarea {position:relative; float:left; width:225px; height:40px; background:#5f5f5f; border:none; padding-left:10px; color:#000;}
+input[type="text"], input[type="email"], textarea, input[type="number"], input[type="button"] {position:relative; float:left; width:230px; height:40px; background:#080808; border:none; padding-left:10px; color:#fff;}
 #contact textarea {width:745px !important; height:160px !important; padding-top:10px; font:normal 13px "freight-sans-pro"; resize:none;}
 #contact .input-label {position:relative; float:left; font-size:13px; margin-bottom:5px; width:100%;}
 #contact #contact-form .last {margin-right:0px !important;}
@@ -155,22 +156,83 @@ input[type="text"], input[type="email"], textarea {position:relative; float:left
 #contact .submit-btn  input[type=submit] {-webkit-appearance: none;}
 #contact div.wpcf7-validation-errors, #gifts div.wpcf7-validation-errors {float:left; border:none;}
 #contact div.wpcf7-response-output, #gifts div.wpcf7-response-output {margin:5px 0 0 4px; padding:0; color:#EF4030;}
-#contact span.wpcf7-not-valid-tip-no-ajax, #gifts span.wpcf7-not-valid-tip-no-ajax {color:#EF4030;}
+#contact span.wpcf7-not-valid-tip-no-ajax, #gifts span.wpcf7-not-valid-tip-no-ajax, #call_for_credit #error_message {color:#EF4030 !important;}
 
 /*FOR SHOP*/
-#custom .add_to_cart_button, .custom-link, .custom-gift {display:none;}
-#custom .custom-link, #custom .custom-gift {display:block;}
+#custom .add_to_cart_button, .custom-link, .custom-gift, .single .product ul.tabs {display:none !important;}
+#custom .custom-link, #custom .custom-gift {display:inline-block !important;}
 #gifts .subtitle {margin-bottom:35px;}
 #gifts .products li {width:230px; margin-left:28px; float:left; text-align:center; margin-bottom:50px;}
 #gifts .products .price {float:left; background:url(../images/gift-price.png) no-repeat center 0; width:100%; height:67px; margin-bottom:12px;}
 #gifts .products .price .amount {color:#ef4030; font:normal 22px 'Didot'; float:left; width:100%; text-align:center; margin-top:20px;}
 #gifts .products .product-info {font-style:italic;}
 #gifts .products .product-title {font-size:18px; text-transform:uppercase;}
-.button {background:#ef4030; color:#fff; font-size:15px; padding:15px 0; text-decoration:none; text-transform:uppercase; float:left; width:100%;}
+.button {background:#ef4030; color:#fff; font-size:15px; padding:15px 0; text-decoration:none; text-transform:uppercase; float:left; width:100%; border:none; cursor:pointer;}
 #splurge .products li:first-child {margin:0 115px 50px;}
 #custom .products li {margin-left:285px;}
 
 /*SINGLE GIFT CERTIF*/
-#product-info {float:left;}
+#product-info {float:right; width:310px; text-align:center;}
+.single .product .images {float:left; width:400px; padding-left:30px;}
+.single .product .description {font:bold 14px "freight-sans-pro"; text-transform:uppercase; float:left; width:100%;}
+#tab-description, #call_for_credit {float:left; width:100%; margin-bottom:20px;}
+#call_for_credit p, #call_for_credit input {display:inline-block; float:none !important; width:100%;}
+#call_for_credit p:first-child {font-size:13px; width:100%;}
+.quantity input[type="number"] {width:30px !important;}
+#product-info button {width:230px; display:inline-block; float:none; cursor:pointer;}
+input[type="button"] {float:left; width:50px; cursor:pointer;}
+#product-info .quantity {display:inline-block; width:130px;}
+
+.woocommerce-message {position:absolute; background:#212121; width:640px; z-index:10; left:85px; padding:45px 0 105px 0; text-align:center; text-transform:uppercase;}
+.woocommerce-message .button {float:none; position:absolute; margin-top:35px; width:225px; left:205px;}
+.woocommerce-message .close {cursor:pointer; position:absolute; top:10px; right:10px;}
+
+/*CART*/
+.woocommerce-cart .subtitle, .woocommerce-checkout .subtitle {margin-top:60px;}
+.woocommerce table {width:100%; margin-top:65px; float:left; text-align:left; text-transform:uppercase;}
+.woocommerce table th, .woocommerce table td {border-bottom:1px solid #bcbcbc; padding:14px;}
+.woocommerce table th {border-top:1px solid #bcbcbc;}
+.woocommerce table a {text-decoration:none; font-weight:bold; font-size:14px; color:#fff;}
+.woocommerce table td.product-price, .woocommerce table td.product-subtotal,.woocommerce table .product-name .product-price, .woocommerce table .cart-collaterals .cart-total {font-style:italic; font-size:16px;}
+.woocommerce table .product-name .product-price, .woocommerce table .product-name a {float:left;}
+.woocommerce table .cart-collaterals td, .woocommerce table tr:last-child td {border:none;}
+.woocommerce table tr:last-child td {padding:10px 0;}
+.woocommerce table input[type="submit"] {float:left; width:230px;}
+.woocommerce table input[type="submit"]:first-child {margin:0 12px 0 270px;}
+
+/*CHECKOUT*/
+.woocommerce-checkout h3 {font-weight:bold; font-size:14px; color:#fff; text-transform:uppercase; float:left; width:100%; padding:0 0 10px 30px; border-bottom:1px solid #bcbcbc; margin-bottom:30px;  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.woocommerce-checkout #primary {padding-right:0; width:814px;}
+form.checkout {float:left; width:100%; background:#2C2C2C;}
+form.checkout .form-row {float:left; width:230px; margin:0 30px 20px 0;}
+form.checkout .form-row:nth-child(3n+4) {margin-right:0;}
+form.checkout #customer_details, form.checkout .gift-certificate, form.checkout #order_review , .gift-certificate-receiver-detail-form, .form_table, form.checkout #customer_details label, #gift-certificate-receiver-form-single label, #gift-certificate-receiver-form-multi label {float:left; width:100%;}
+form.checkout label {font-weight:400; font-size:13px; text-transform:uppercase; margin-bottom:10px;}
+abbr {border-bottom:none;}
+.styled-select {width:230px; background:url(../images/dd-arrow.png) no-repeat 205px 18px #080808; cursor:pointer; height:30px; overflow:hidden; float:left; padding-top:10px;}
+.styled-select select {width:250px; height:40px; border:none; padding-left:10px; color:#fff; background:none;}
+form.checkout .gift-certificate {border-radius:none; background:none; padding:0; }
+.gift-certificate-show-form {float:left; width:100%; line-height:40px;}
+.woocommerce-checkout .form_table {border:none; margin-top:20px;}
+.woocommerce-checkout .single_multi_list {padding:25px 0 25px 35px; background:#080808; width:100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+#gift-certificate-receiver-form-single .email_amount .email, #gift-certificate-receiver-form-multi .email_amount .email {float:left; width:355px; margin-right:35px;}
+#gift-certificate-receiver-form-single div.amount, #gift-certificate-receiver-form-multi div.amount {width:45%; }
+#gift-certificate-receiver-form-single p.coupon_amount_label, #gift-certificate-receiver-form-multi p.coupon_amount_label {text-align:left; margin-top:35px;}
+#gift-certificate-receiver-form-single input[type="text"], #gift-certificate-receiver-form-multi input[type="text"] {width:355px; min-width:auto; margin-bottom:30px;}
+#gift-certificate-receiver-form-single textarea, #gift-certificate-receiver-form-multi textarea {width:100%; height:170px;}
+#coupons_list {display:none;}
+.margin-cont, .gift-certificate-show-form, form.checkout #payment, .woocommerce-checkout .form_table, .thank-you {float:left; width:100%; padding:0 0 0 25px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+table.shop_table {margin-top:-33px; border-collapse:collapse;}
+table.shop_table th {border-top:none;}
+table.shop_table th:first-child, table.shop_table td:first-child {padding-left:30px; font-weight:bold;}
+table.shop_table tr:last-child td {padding:14px;}
+form.checkout #payment .payment_methods input, form.checkout #payment .payment_methods label, .woocommerce-checkout .woocommerce-info {display:none;}
+.payment_box {font:normal 16px "adobe-caslon-pro"; font-style:italic; float:left; width:50%;}
+#place_order {float:right; width:225px; margin-top:30px;}
+#paypal_payment_form .button {width:325px; float:left; margin:10px 25px 0;}
+
+
+
+
 
 

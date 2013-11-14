@@ -21,7 +21,7 @@ global $woocommerce;
 	<h3><?php _e( 'Billing Address', 'woocommerce' ); ?></h3>
 
 <?php endif; ?>
-
+<div class="margin-cont">
 <?php do_action('woocommerce_before_checkout_billing_form', $checkout ); ?>
 
 <?php foreach ($checkout->checkout_fields['billing'] as $key => $field) : ?>
@@ -31,7 +31,7 @@ global $woocommerce;
 <?php endforeach; ?>
 
 <?php do_action('woocommerce_after_checkout_billing_form', $checkout ); ?>
-
+</div>
 
 
 <?php if ( ! is_user_logged_in() && $checkout->enable_signup ) : ?>

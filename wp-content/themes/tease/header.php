@@ -115,6 +115,7 @@
 				<a id="book-link" href="http://www.oursalononline.com/Online/%28S%28qnhn1p45e5dozkevaegpzib4%29%29/book.aspx?acc=teasedrybar" class="freight-bold header-links" target="_blank">book</a>
 				<a id="news-link" href="/news" class="freight-bold header-links">news</a>
 				<a id="contact-link" href="/contact" class="freight-bold header-links">contact</a>
+				<a id="contact-link" href="/cart" class="freight-bold header-links">shopping cart</a>
 				<div class="bottom-menu">
 					<div class="dryer-img"><img src="<?php echo get_template_directory_uri(); ?>/images/blow-dry.png" /></div>
 					<!-- <div class="freight-medium header-text">no appointment needed</div> -->

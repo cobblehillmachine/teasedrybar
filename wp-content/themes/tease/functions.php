@@ -399,7 +399,7 @@ add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
 
 function my_theme_wrapper_start() {
-  echo '<section id="main">';
+  echo '<section id="main" class="wrapper">';
 }
 
 function my_theme_wrapper_end() {
@@ -407,4 +407,24 @@ function my_theme_wrapper_end() {
 }
 add_theme_support( 'woocommerce' );
 
+// Hook in
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
+// Our hooked in function - $fields is passed via the filter!
+function custom_override_checkout_fields( $fields ) {
+     unset($fields['billing']['billing_company']);
+	 unset($fields['shipping']['shipping_company']);
+	unset($fields['billing']['billing_country']);
+	 unset($fields['shipping']['shipping_country']);
+  	$fields['billing']['billing_address_1'] = array('label'   => _x('Street Address*', 'label', 'woocommerce'),'placeholder' => false);
+	$fields['shipping']['shipping_address_1'] = array('label'   => _x('Street Address*', 'label', 'woocommerce'),'placeholder' => false);
+	$fields['billing']['billing_address_2'] = array('label'   => _x('Street Address 2', 'label', 'woocommerce'),'placeholder' => false);
+	$fields['shipping']['shipping_address_2'] = array('label'   => _x('Street Address 2', 'label', 'woocommerce'),'placeholder' => false);
+	$fields['billing']['billing_city'] = array('label'   => _x('City*', 'label', 'woocommerce'),'placeholder' => false);
+	$fields['shipping']['shipping_city'] = array('label'   => _x('City*', 'label', 'woocommerce'),'placeholder' => false);
+	$fields['billing']['billing_postcode'] = array('label'   => _x('Zipcode*', 'label', 'woocommerce'),'placeholder' => false);
+	$fields['shipping']['shipping_postcode'] = array('label'   => _x('Zipcode*', 'label', 'woocommerce'),'placeholder' => false);  
+
+
+     return $fields;
+}

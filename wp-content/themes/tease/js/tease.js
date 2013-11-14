@@ -23,13 +23,27 @@ $(document).ready(function() {
 	
 	$('#mobile-tab').toggle(function(){
 		$('.small-cont').slideToggle('slow');
-		$('#mobile-tab').css({'background-position-y': 100 +'%'});
+		$('#mobile-tab').css({'background-position-y': -31 +'px'});
 		$('#about-link').css('margin-top' , 50);
 	},
 	function(){
 		$('.small-cont').slideToggle('slow');
 		$('#mobile-tab').css({'background-position-y': 0 +'%'});
 		$('#about-link').css('margin-top' , 50);
+	});
+	$('#call_for_credit p:first-child').html('DOLLAR AMOUNT');
+	$('#gifts .woocommerce-message .button').html('view cart');
+	$('.woocommerce-message .button').before('<div class="close" onclick="closeMessage();">X</div>');
+	$('select').each(function () {
+	        $(this).wrapAll('<div class="styled-select"></div>');
+	   });
+	$('select option:first-child').each(function() {
+		$(this).html('');
+	});
+	$('input[type="radio"]').each(function() {
+		$(this).click(function() {
+			headerHeight();
+		});
 	});
 });
 
@@ -58,7 +72,9 @@ $(document).keydown(function(e){
 	    }
 });
 
-
+function closeMessage() {
+	$('.woocommerce-message').fadeOut('slow');
+}
 
 function fullScreen(){
 	var FullscreenrOptions = { width: 1280, height: 1024, bgID: '.bgimg' };

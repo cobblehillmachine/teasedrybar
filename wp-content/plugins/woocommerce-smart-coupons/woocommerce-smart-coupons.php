@@ -1167,7 +1167,7 @@ if ( is_woocommerce_active() ) {
                                     <p style="float: left">
                                     <?php 
                                         echo __( stripslashes( $smart_coupon_store_gift_page_text ) , 'wc_smart_coupons') . '(' . $currency_symbol . ')'; 
-                                        echo '</p><br /><br />';
+                                        echo '</p>';
                                         echo "<input id='credit_called' type='number' min='1' name='credit_called' value='' autocomplete='off' />";
                                     ?>
                                     <p id="error_message" style="color: red;"></p>
@@ -1470,11 +1470,11 @@ if ( is_woocommerce_active() ) {
                         ?>
 						<div class="form_table">
                             <div class="email_amount">
-                                <div class="amount"><p class="coupon_amount_label"><?php echo woocommerce_price( $coupon_amount ); ?></p></div>
-                                <div class="email"><input class="gift_receiver_email" type="text" placeholder="<?php _e( 'Email address', 'wc_smart_coupons' ); ?>..." name="gift_receiver_email[<?php echo $coupon->id; ?>][]" value="" /></div>
+                                <div class="amount"><p class="coupon_amount_label">GIFT CERTIFICATE AMOUNT: <?php echo woocommerce_price( $coupon_amount ); ?></p></div>
+                                <div class="email"><label>email address of recipient</label><input class="gift_receiver_email" type="text" name="gift_receiver_email[<?php echo $coupon->id; ?>][]" value="" /></div>
                             </div>
                             <div class="message_row">
-                                <div class="sc_message"><textarea placeholder="<?php _e('Message', 'wc_smart_coupons'); ?>..." class="gift_receiver_message" name="gift_receiver_message[<?php echo $coupon->id; ?>][]" cols="50" rows="5"></textarea></div>
+                                <div class="sc_message"><label>message</label><textarea class="gift_receiver_message" name="gift_receiver_message[<?php echo $coupon->id; ?>][]" cols="50" rows="5"></textarea></div>
                             </div>
                         </div>
                         <?php
@@ -1511,7 +1511,7 @@ if ( is_woocommerce_active() ) {
 
                                                     $pick_price_of_prod = get_post_meta( $coupon->id, 'is_pick_price_of_product', true ) ;
 													$smart_coupon_gift_certificate_form_page_text  = get_option('smart_coupon_gift_certificate_form_page_text');
-                            $smart_coupon_gift_certificate_form_page_text  = ( !empty( $smart_coupon_gift_certificate_form_page_text ) ) ? $smart_coupon_gift_certificate_form_page_text : 'Store Credit Receiver Details';
+                            $smart_coupon_gift_certificate_form_page_text  = ( !empty( $smart_coupon_gift_certificate_form_page_text ) ) ? $smart_coupon_gift_certificate_form_page_text : 'Gift Certificate Receiver Details';
                                                     $smart_coupon_gift_certificate_form_details_text  = get_option('smart_coupon_gift_certificate_form_details_text');
                                                     $smart_coupon_gift_certificate_form_details_text  = ( !empty( $smart_coupon_gift_certificate_form_details_text ) ) ? $smart_coupon_gift_certificate_form_details_text : '';     // Enter email address and optional message for Gift Card receiver
                                                     
@@ -1560,9 +1560,9 @@ if ( is_woocommerce_active() ) {
                                         <div class="gift-certificate-show-form">
                                             <p><?php _e( 'Your order contains store credit. What would you like to do?', 'wc_smart_coupons' ); ?></p>
                                             <ul class="show_hide_list" style="list-style-type: none;">
-                                                <li><input type="radio" id="hide_form" name="is_gift" value="no" checked="checked" /> <label for="hide_form"><?php _e( 'Send store credit to me', 'wc_smart_coupons' ); ?></label></li>
+                                                <li><input type="radio" id="hide_form" name="is_gift" value="no" checked="checked" /> <label for="hide_form"><?php _e( 'Send gift certificate to me', 'wc_smart_coupons' ); ?></label></li>
                                                 <li>
-                                                    <input type="radio" id="show_form" name="is_gift" value="yes" /> <label for="show_form"><?php _e( 'Gift store credit to someone else', 'wc_smart_coupons' ); ?></label>
+                                                    <input type="radio" id="show_form" name="is_gift" value="yes" /> <label for="show_form"><?php _e( 'Gift gift certificate to someone else', 'wc_smart_coupons' ); ?></label>
                                                     <ul class="single_multi_list" style="list-style-type: none;">
                                                         <li><input type="radio" id="send_to_one" name="sc_send_to" value="one" checked="checked" /> <label for="send_to_one"><?php _e( 'Send to one person', 'wc_smart_coupons' ); ?></label>
                                                         <input type="radio" id="send_to_many" name="sc_send_to" value="many" /> <label for="send_to_many"><?php _e( 'Send to different people', 'wc_smart_coupons' ); ?></label></li>
@@ -1595,11 +1595,11 @@ if ( is_woocommerce_active() ) {
                     <div id="gift-certificate-receiver-form-single">
                         <div class="form_table">
                             <div class="email_amount">
-                                <div class="amount"><p class="coupon_amount_label"><?php echo woocommerce_price( $total_coupon_amount ); ?></p></div>
-                                <div class="email"><input class="gift_receiver_email" type="text" placeholder="<?php _e( 'Email address', 'wc_smart_coupons' ); ?>..." name="gift_receiver_email[0][0]" value="" /></div>
+                                <div class="amount"><p class="coupon_amount_label">GIFT CERTIFICATE AMOUNT: <?php echo woocommerce_price( $total_coupon_amount ); ?></p></div>
+                                <div class="email"><label>email address of recipient</label><input class="gift_receiver_email" type="text" name="gift_receiver_email[0][0]" value="" /></div>
                             </div>
                             <div class="message_row">
-                                <div class="message"><textarea placeholder="<?php _e('Message', 'wc_smart_coupons'); ?>..." class="gift_receiver_message" name="gift_receiver_message[0][0]" cols="50" rows="5"></textarea></div>
+                                <div class="message"><label>message</label><textarea class="gift_receiver_message" name="gift_receiver_message[0][0]" cols="50" rows="5"></textarea></div>
                             </div>
                         </div>
                     </div>                                 

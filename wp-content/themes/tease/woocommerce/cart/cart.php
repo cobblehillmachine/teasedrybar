@@ -11,24 +11,23 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce;
 
-$woocommerce->show_messages();
+//$woocommerce->show_messages();
 ?>
 
 <?php do_action( 'woocommerce_before_cart' ); ?>
-
+<div class="subtitle">VIEW YOUR CART, <span>Checkout</span></div>
 <form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 <table class="shop_table cart" cellspacing="0">
 	<thead>
-		<tr>
-			<th class="product-remove">&nbsp;</th>
-			<th class="product-thumbnail">&nbsp;</th>
+		<tr>		
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
-			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
+			<th class="product-quantity"><span><?php _e( 'Quantity', 'woocommerce' ); ?></span></th>
 			<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<th class="product-remove">&nbsp;</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -41,25 +40,6 @@ $woocommerce->show_messages();
 				if ( $_product->exists() && $values['quantity'] > 0 ) {
 					?>
 					<tr class = "<?php echo esc_attr( apply_filters('woocommerce_cart_table_item_class', 'cart_table_item', $values, $cart_item_key ) ); ?>">
-						<!-- Remove from cart link -->
-						<td class="product-remove">
-							<?php
-								echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="%s" class="remove" title="%s">&times;</a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'woocommerce' ) ), $cart_item_key );
-							?>
-						</td>
-
-						<!-- The thumbnail -->
-						<td class="product-thumbnail">
-							<?php
-								$thumbnail = apply_filters( 'woocommerce_in_cart_product_thumbnail', $_product->get_image(), $values, $cart_item_key );
-
-								if ( ! $_product->is_visible() || ( ! empty( $_product->variation_id ) && ! $_product->parent_is_visible() ) )
-									echo $thumbnail;
-								else
-									printf('<a href="%s">%s</a>', esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $values['product_id'] ) ) ), $thumbnail );
-							?>
-						</td>
-
 						<!-- Product Name -->
 						<td class="product-name">
 							<?php
@@ -74,7 +54,11 @@ $woocommerce->show_messages();
                    				// Backorder notification
                    				if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $values['quantity'] ) )
                    					echo '<p class="backorder_notification">' . __( 'Available on backorder', 'woocommerce' ) . '</p>';
-							?>
+							?> <div class="product_price">&dash; <?php
+																									$product_price = get_option('woocommerce_tax_display_cart') == 'excl' ? $_product->get_price_excluding_tax() : $_product->get_price_including_tax();
+
+																									echo apply_filters('woocommerce_cart_item_price_html', woocommerce_price( $product_price ), $values, $cart_item_key );
+																								?></div>
 						</td>
 
 						<!-- Product price -->
@@ -110,6 +94,13 @@ $woocommerce->show_messages();
 								echo apply_filters( 'woocommerce_cart_item_subtotal', $woocommerce->cart->get_product_subtotal( $_product, $values['quantity'] ), $values, $cart_item_key );
 							?>
 						</td>
+						
+						<!-- Remove from cart link -->
+						<td class="product-remove">
+							<?php
+								echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="%s" class="remove" title="%s">&times;</a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'woocommerce' ) ), $cart_item_key );
+							?>
+						</td>
 					</tr>
 					<?php
 				}
@@ -118,6 +109,15 @@ $woocommerce->show_messages();
 
 		do_action( 'woocommerce_cart_contents' );
 		?>
+		<tr class="cart-collaterals">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td style="text-align:right"><strong>TOTAL</strong></td>
+			<td class="cart-total"><?php echo $woocommerce->cart->get_total(); ?></td>
+			<td>&nbsp;</td>
+
+
+		</tr>
 		<tr>
 			<td colspan="6" class="actions">
 
@@ -131,7 +131,7 @@ $woocommerce->show_messages();
 					</div>
 				<?php } ?>
 
-				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt" name="proceed" value="<?php _e( 'Proceed to Checkout &rarr;', 'woocommerce' ); ?>" />
+				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt" name="proceed" value="<?php _e( 'Checkout', 'woocommerce' ); ?>" />
 
 				<?php do_action('woocommerce_proceed_to_checkout'); ?>
 
@@ -147,14 +147,6 @@ $woocommerce->show_messages();
 
 </form>
 
-<div class="cart-collaterals">
 
-	<?php do_action('woocommerce_cart_collaterals'); ?>
-
-	<?php woocommerce_cart_totals(); ?>
-
-	<?php woocommerce_shipping_calculator(); ?>
-
-</div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>

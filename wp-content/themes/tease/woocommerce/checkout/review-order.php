@@ -19,10 +19,12 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 		<thead>
 			<tr>
 				<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-				<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
+				<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
+				<th class="product-quantity"><span><?php _e( 'Quantity', 'woocommerce' ); ?></span></th>
+				<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
 			</tr>
 		</thead>
-		<tfoot>
+		<!-- <tfoot>
 			<tr class="cart-subtotal">
 				<th><?php _e( 'Cart Subtotal', 'woocommerce' ); ?></th>
 				<td><?php echo $woocommerce->cart->get_cart_subtotal(); ?></td>
@@ -110,7 +112,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 
 			<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>
 
-		</tfoot>
+		</tfoot> -->
 		<tbody>
 			<?php
 				do_action( 'woocommerce_review_order_before_cart_contents' );
@@ -118,18 +120,35 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 				if (sizeof($woocommerce->cart->get_cart())>0) :
 					foreach ($woocommerce->cart->get_cart() as $cart_item_key => $values) :
 						$_product = $values['data'];
+						$product_price = get_option('woocommerce_tax_display_cart') == 'excl' ? $_product->get_price_excluding_tax() : $_product->get_price_including_tax();
 						if ($_product->exists() && $values['quantity']>0) :
 							echo '
 								<tr class="' . esc_attr( apply_filters('woocommerce_checkout_table_item_class', 'checkout_table_item', $values, $cart_item_key ) ) . '">
 									<td class="product-name">' .
 										apply_filters( 'woocommerce_checkout_product_title', $_product->get_title(), $_product ) . ' ' .
-										apply_filters( 'woocommerce_checkout_item_quantity', '<strong class="product-quantity">&times; ' . $values['quantity'] . '</strong>', $values, $cart_item_key ) .
-										$woocommerce->cart->get_item_data( $values ) .
-									'</td>
+										
+									'' .  apply_filters('woocommerce_cart_item_price_html', woocommerce_price( $product_price ), $values, $cart_item_key ) . '</td>
+									<td class="product-price">
+										' .  apply_filters('woocommerce_cart_item_price_html', woocommerce_price( $product_price ), $values, $cart_item_key ) . '
+									</td>
+									<td class="product-quantity">
+										' .
+										apply_filters( 'woocommerce_checkout_item_quantity', '' . $values['quantity'] . '</strong>', $values, $cart_item_key ) .
+
+									'
+									</td>
 									<td class="product-total">' . apply_filters( 'woocommerce_checkout_item_subtotal', $woocommerce->cart->get_product_subtotal( $_product, $values['quantity'] ), $values, $cart_item_key ) . '</td>
-								</tr>';
+									
+								</tr>
+								';
 						endif;
 					endforeach;
+					echo '<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td style="text-align:right"><strong>TOTAL</strong></td>
+								<td class="cart-total"> '.apply_filters( 'woocommerce_checkout_total', $woocommerce->cart->get_total()).'</td>
+					</tr>';
 				endif;
 
 				do_action( 'woocommerce_review_order_after_cart_contents' );
@@ -180,7 +199,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 		</ul>
 		<?php endif; ?>
 
-		<div class="form-row place-order">
+		<div class="place-order">
 
 			<noscript><?php _e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'woocommerce' ); ?><br/><input type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="<?php _e( 'Update totals', 'woocommerce' ); ?>" /></noscript>
 
