@@ -17,17 +17,24 @@ $base_lighter_40 = woocommerce_hex_lighter( $base, 40 );
 // For gmail compatibility, including CSS styles in head/body are stripped out therefore styles need to be inline. These variables contain rules which are added to the template inline.
 $template_footer = "
 	border-top:0;
-	-webkit-border-radius:6px;
+	background-color: #ef4030;
+	color:#fff;
+	font:normal 13px Tahoma;
 ";
 
 $credit = "
 	border:0;
-	color: $base_lighter_40;
 	font-family: Arial;
 	font-size:12px;
 	line-height:125%;
 	text-align:center;
+	color:#fff;
 ";
+
+$footer_address = "float:left; width:50%; text-align:left; font:normal 13px Helvetica; line-height:18px;";
+$footer_social = "float:right; width:50%;";
+$social_icon ="float:left; width:20px; height:20px;";
+
 ?>
 															</div>
 														</td>
@@ -43,13 +50,33 @@ $credit = "
                         	<tr>
                             	<td align="center" valign="top">
                                     <!-- Footer -->
-                                	<table border="0" cellpadding="10" cellspacing="0" width="600" id="template_footer" style="<?php echo $template_footer; ?>">
+                                	<table border="0" cellpadding="10" cellspacing="0" width="650" id="template_footer" style="<?php echo $template_footer; ?>">
                                     	<tr>
                                         	<td valign="top">
                                                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                                     <tr>
                                                         <td colspan="2" valign="middle" id="credit" style="<?php echo $credit; ?>">
-                                                        	<?php echo wpautop( wp_kses_post( wptexturize( apply_filters( 'woocommerce_email_footer_text', get_option( 'woocommerce_email_footer_text' ) ) ) ) ); ?>
+                                                        	<div style="<?php echo $footer_address; ?>">
+																430 king street<br/>
+																charleston, sc 29401<br/>
+																843.724.9493<br/>
+																<font style="text-decoration:none; color:#fff;"><a href="mailto:info@teasedrybar.com" style="text-decoration:none; color:#fff;">info@teasedrybar.com</a></font>
+															</div>
+															<div style="<?php echo $footer_social; ?>">
+																<a style="<?php echo $social_icon; ?>; margin-right:40px;" href="http://www.facebook.com/TeaseDryBar" target="_blank">
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://tease.local/wp-content/themes/tease/images/fb_email.png" />
+																</a>
+																<a style="<?php echo $social_icon; ?>; margin-right:40px;" href="https://twitter.com/TeaseDryBar" target="_blank">
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://tease.local/wp-content/themes/tease/images/twitter_email.png" />
+																</a>
+																<a style="<?php echo $social_icon; ?>; margin-right:40px;" href="http://pinterest.com/teasedrybar/" target="_blank">
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://tease.local/wp-content/themes/tease/images/pinterest_email.png" />
+																</a>
+																<a style="<?php echo $social_icon; ?>; margin-right:40px;" href="http://web.stagram.com/n/teasedrybar/" target="_blank">
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://tease.local/wp-content/themes/tease/images/instagram_email.png" />
+																</a>
+														
+															</div>
                                                         </td>
                                                     </tr>
                                                 </table>

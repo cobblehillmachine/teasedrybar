@@ -22,43 +22,35 @@ $text_lighter_20 = woocommerce_hex_lighter( $text, 20 );
 
 // For gmail compatibility, including CSS styles in head/body are stripped out therefore styles need to be inline. These variables contain rules which are added to the template inline. !important; is a gmail hack to prevent styles being stripped if it doesn't like something.
 $wrapper = "
-	background-color: " . esc_attr( $bg ) . ";
+	background-color: #fff;
 	width:100%;
 	-webkit-text-size-adjust:none !important;
 	margin:0;
 	padding: 70px 0 70px 0;
+	font-family: Tahoma;
 ";
 $template_container = "
 	-webkit-box-shadow:0 0 0 3px rgba(0,0,0,0.025) !important;
 	box-shadow:0 0 0 3px rgba(0,0,0,0.025) !important;
-	-webkit-border-radius:6px !important;
-	border-radius:6px !important;
 	background-color: " . esc_attr( $body ) . ";
 	border: 1px solid $bg_darker_10;
-	-webkit-border-radius:6px !important;
-	border-radius:6px !important;
+
 ";
 $template_header = "
-	background-color: " . esc_attr( $base ) .";
+	background-color: #ef4030;
 	color: $base_text;
-	-webkit-border-top-left-radius:6px !important;
-	-webkit-border-top-right-radius:6px !important;
-	border-top-left-radius:6px !important;
-	border-top-right-radius:6px !important;
+
 	border-bottom: 0;
-	font-family:Arial;
 	font-weight:bold;
 	line-height:100%;
 	vertical-align:middle;
 ";
 $body_content = "
-	background-color: " . esc_attr( $body ) . ";
-	-webkit-border-radius:6px !important;
-	border-radius:6px !important;
+	background-color: #2c2c2c;
+	color:#fff;
+	font:normal 13px Tahoma;
 ";
 $body_content_inner = "
-	color: $text_lighter_20;
-	font-family:Arial;
 	font-size:14px;
 	line-height:150%;
 	text-align:left;
@@ -69,7 +61,7 @@ $header_content_h1 = "
 	padding: 28px 24px;
 	text-shadow: 0 1px 0 $base_lighter_20;
 	display:block;
-	font-family:Arial;
+
 	font-size:30px;
 	font-weight:bold;
 	text-align:left;
@@ -92,15 +84,15 @@ $header_content_h1 = "
                 				echo '<p style="margin-top:0;"><img src="' . esc_url( $img ) . '" alt="' . get_bloginfo( 'name' ) . '" /></p>';
                 			}
                 		?>
-                    	<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_container" style="<?php echo $template_container; ?>">
+                    	<table border="0" cellpadding="0" cellspacing="0" width="650" id="template_container" style="<?php echo $template_container; ?>">
                         	<tr>
                             	<td align="center" valign="top">
                                     <!-- Header -->
-                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_header" style="<?php echo $template_header; ?>" bgcolor="<?php echo $base; ?>">
+                                	<table border="0" cellpadding="0" cellspacing="0" width="650" id="template_header" style="<?php echo $template_header; ?>" bgcolor="<?php echo $base; ?>">
                                         <tr>
-                                            <td>
-                                            	<h1 style="<?php echo $header_content_h1; ?>"><?php echo $email_heading; ?></h1>
-
+                                            <td style="text-align:center;">
+                                            	<a href="http://teaseblowdrybar.com" target="_blank" style="display:inline-block; margin:40px 0 30px 0;"><img style="border:0;" src="http://tease.local/wp-content/themes/tease/images/logo.png" /></a>
+												<p style="font:normal 11px Helvetica; letter-spacing:0.5px; margin-bottom:20px;">CHARLESTON'S FIRST BLOW DRY BAR</p>
                                             </td>
                                         </tr>
                                     </table>
@@ -110,7 +102,7 @@ $header_content_h1 = "
                         	<tr>
                             	<td align="center" valign="top">
                                     <!-- Body -->
-                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_body">
+                                	<table border="0" cellpadding="0" cellspacing="0" width="650" id="template_body">
                                     	<tr>
                                             <td valign="top" style="<?php echo $body_content; ?>">
                                                 <!-- Content -->
