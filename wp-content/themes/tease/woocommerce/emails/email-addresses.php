@@ -9,13 +9,18 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+$header_content_section = "
+	color: #fff; font:bold 18px Tahoma; margin:40px 0 15px 0;
+	line-height: 150%; width:100%; text-align:left;
+";
+
 ?><table cellspacing="0" cellpadding="0" style="width: 100%; vertical-align: top;" border="0">
 
 	<tr>
 
 		<td valign="top" width="50%">
 
-			<h3><?php _e( 'Billing address', 'woocommerce' ); ?></h3>
+			<h1 style="<?php echo $header_content_section; ?>"><?php _e( 'Billing address', 'woocommerce' ); ?></h1>
 
 			<p><?php echo $order->get_formatted_billing_address(); ?></p>
 

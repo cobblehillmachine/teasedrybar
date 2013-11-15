@@ -31,8 +31,8 @@ $credit = "
 	color:#fff;
 ";
 
-$footer_address = "float:left; width:50%; text-align:left; font:normal 13px Helvetica; line-height:18px;";
-$footer_social = "float:right; width:50%;";
+$footer_address = "float:left; margin-left:10px; text-align:left; font:normal 13px Helvetica; line-height:18px;";
+$footer_social = "float:right; margin-right:10px;";
 $social_icon ="float:left; width:20px; height:20px;";
 
 ?>
@@ -53,27 +53,27 @@ $social_icon ="float:left; width:20px; height:20px;";
                                 	<table border="0" cellpadding="10" cellspacing="0" width="650" id="template_footer" style="<?php echo $template_footer; ?>">
                                     	<tr>
                                         	<td valign="top">
-                                                <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                                <table border="0" cellpadding="30" cellspacing="0" width="100%">
                                                     <tr>
                                                         <td colspan="2" valign="middle" id="credit" style="<?php echo $credit; ?>">
                                                         	<div style="<?php echo $footer_address; ?>">
 																430 king street<br/>
 																charleston, sc 29401<br/>
-																843.724.9493<br/>
+																<font style="text-decoration:none; color:#fff;"><a style="text-decoration:none; color:#fff;" href="843.724.9493">843.724.9493</a></font><br/>
 																<font style="text-decoration:none; color:#fff;"><a href="mailto:info@teasedrybar.com" style="text-decoration:none; color:#fff;">info@teasedrybar.com</a></font>
 															</div>
 															<div style="<?php echo $footer_social; ?>">
-																<a style="<?php echo $social_icon; ?>; margin-right:40px;" href="http://www.facebook.com/TeaseDryBar" target="_blank">
-																	<img style="border:0; <?php echo $social_img; ?>" src="http://tease.local/wp-content/themes/tease/images/fb_email.png" />
+																<a style="<?php echo $social_icon; ?>; margin:3px 30px 0 0;" href="http://www.facebook.com/TeaseDryBar" target="_blank">
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://teasedrybar.com/wp-content/themes/tease/images/fb_email.png" />
 																</a>
-																<a style="<?php echo $social_icon; ?>; margin-right:40px;" href="https://twitter.com/TeaseDryBar" target="_blank">
-																	<img style="border:0; <?php echo $social_img; ?>" src="http://tease.local/wp-content/themes/tease/images/twitter_email.png" />
+																<a style="<?php echo $social_icon; ?>; margin-right:30px;" href="https://twitter.com/TeaseDryBar" target="_blank">
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://teasedrybar.com/wp-content/themes/tease/images/twitter_email.png" />
 																</a>
-																<a style="<?php echo $social_icon; ?>; margin-right:40px;" href="http://pinterest.com/teasedrybar/" target="_blank">
-																	<img style="border:0; <?php echo $social_img; ?>" src="http://tease.local/wp-content/themes/tease/images/pinterest_email.png" />
+																<a style="<?php echo $social_icon; ?>; margin-right:28px;" href="http://pinterest.com/teasedrybar/" target="_blank">
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://teasedrybar.com/wp-content/themes/tease/images/pinterest_email.png" />
 																</a>
-																<a style="<?php echo $social_icon; ?>; margin-right:40px;" href="http://web.stagram.com/n/teasedrybar/" target="_blank">
-																	<img style="border:0; <?php echo $social_img; ?>" src="http://tease.local/wp-content/themes/tease/images/instagram_email.png" />
+																<a style="<?php echo $social_icon; ?>;" href="http://web.stagram.com/n/teasedrybar/" target="_blank">
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://teasedrybar.com/wp-content/themes/tease/images/instagram_email.png" />
 																</a>
 														
 															</div>

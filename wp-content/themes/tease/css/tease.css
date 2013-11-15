@@ -219,7 +219,7 @@ form.checkout .gift-certificate {border-radius:none; background:none; padding:0;
 #gift-certificate-receiver-form-single div.amount, #gift-certificate-receiver-form-multi div.amount {width:45%; }
 #gift-certificate-receiver-form-single p.coupon_amount_label, #gift-certificate-receiver-form-multi p.coupon_amount_label {text-align:left; margin-top:35px;}
 #gift-certificate-receiver-form-single input[type="text"], #gift-certificate-receiver-form-multi input[type="text"] {width:355px; min-width:auto; margin-bottom:30px;}
-#gift-certificate-receiver-form-single textarea, #gift-certificate-receiver-form-multi textarea {width:100%; height:170px;}
+#gift-certificate-receiver-form-single textarea, #gift-certificate-receiver-form-multi textarea {width:100%; height:170px; padding-top:15px; font:normal 13px "freight-sans-pro"; resize:none;}
 #coupons_list {display:none;}
 .margin-cont, .gift-certificate-show-form, form.checkout #payment, .woocommerce-checkout .form_table, .thank-you {float:left; width:100%; padding:0 0 0 25px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 table.shop_table {margin-top:-33px; border-collapse:collapse;}

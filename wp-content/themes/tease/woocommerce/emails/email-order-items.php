@@ -21,7 +21,7 @@ foreach ( $items as $item ) :
 	if ( ! is_object( $_product ) ) :
 		?>
 		<tr>
-			<td style="text-align:left; vertical-align:middle; border: 1px solid #eee; word-wrap:break-word;">
+			<td style="text-align:left; vertical-align:middle; border: 1px solid #3a3a3a; word-wrap:break-word;">
 			<?php
 
 				// Show title/image etc
@@ -38,8 +38,8 @@ foreach ( $items as $item ) :
 
 			?>
 			</td>
-			<td style="text-align:left; vertical-align:middle; border: 1px solid #eee;"><?php echo $item['qty'] ;?></td>
-			<td style="text-align:left; vertical-align:middle; border: 1px solid #eee;"><?php echo $order->get_formatted_line_subtotal( $item ); ?></td>
+			<td style="text-align:left; vertical-align:middle; border: 1px solid #3a3a3a;"><?php echo $item['qty'] ;?></td>
+			<td style="text-align:left; vertical-align:middle; border: 1px solid #3a3a3a;"><?php echo $order->get_formatted_line_subtotal( $item ); ?></td>
 		</tr>
 		<?php
 	else :
@@ -48,7 +48,7 @@ foreach ( $items as $item ) :
 
 		?>
 		<tr>
-			<td style="text-align:left; vertical-align:middle; border: 1px solid #eee; word-wrap:break-word;"><?php
+			<td style="text-align:left; vertical-align:middle; border: 1px solid #3a3a3a; word-wrap:break-word;"><?php
 
 				// Show title/image etc
 				echo 	apply_filters( 'woocommerce_order_product_image', $image, $_product, $show_image);
@@ -87,13 +87,13 @@ foreach ( $items as $item ) :
 				echo 	($item_meta->meta) ? '<br/><small>' . nl2br( $item_meta->display( true, true ) ) . '</small>' : '';
 
 			?></td>
-			<td style="text-align:left; vertical-align:middle; border: 1px solid #eee;"><?php echo $item['qty'] ;?></td>
-			<td style="text-align:left; vertical-align:middle; border: 1px solid #eee;"><?php echo $order->get_formatted_line_subtotal( $item ); ?></td>
+			<td style="text-align:left; vertical-align:middle; border: 1px solid #3a3a3a;"><?php echo $item['qty'] ;?></td>
+			<td style="text-align:left; vertical-align:middle; border: 1px solid #3a3a3a;"><?php echo $order->get_formatted_line_subtotal( $item ); ?></td>
 		</tr>
 
 		<?php if ($show_purchase_note && $purchase_note = get_post_meta( $_product->id, '_purchase_note', true)) : ?>
 			<tr>
-				<td colspan="3" style="text-align:left; vertical-align:middle; border: 1px solid #eee;"><?php echo apply_filters('the_content', $purchase_note); ?></td>
+				<td colspan="3" style="text-align:left; vertical-align:middle; border: 1px solid #3a3a3a;"><?php echo apply_filters('the_content', $purchase_note); ?></td>
 			</tr>
 		<?php endif; ?>
 	<?php endif; ?>

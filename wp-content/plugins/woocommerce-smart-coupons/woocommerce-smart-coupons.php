@@ -2317,11 +2317,11 @@ if ( is_woocommerce_active() ) {
                 // Start collecting content for e-mail
                 ob_start();
 
-                $subject = __( 'Gift Card sent successfully!', 'wc_smart_coupons' );
+                $subject = __( 'Gift Certificate sent successfully!', 'wc_smart_coupons' );
 
                 do_action('woocommerce_email_header', $subject);
 
-                echo sprintf(__('You have successfully sent %d %s to %s (%s)', 'wc_smart_coupons'), $receiver_count, _n( 'Gift Card', 'Gift Cards', count( $receivers_detail ), 'wc_smart_coupons'), $gift_certificate_receiver_name, implode( ', ', array_unique( $receivers_detail ) ) );
+                echo sprintf(__('You have successfully sent %d %s to %s (%s)', 'wc_smart_coupons'), $receiver_count, _n( 'Gift Certificate', 'Gift Certificates', count( $receivers_detail ), 'wc_smart_coupons'), $gift_certificate_receiver_name, implode( ', ', array_unique( $receivers_detail ) ) );
 
                 do_action('woocommerce_email_footer');
 
@@ -2358,10 +2358,10 @@ if ( is_woocommerce_active() ) {
                     $sender .= ( !empty( $gift_certificate_sender_email ) ) ? $gift_certificate_sender_email : '';
                     $sender .= ( !empty( $gift_certificate_sender_name ) ) ? ')' : '';
                     $from = ' ' . __( 'from', 'wc_smart_coupons' ) . ' ';
-                    $smart_coupon_type = __( 'Gift Card', 'wc_smart_coupons' );
+                    $smart_coupon_type = __( ' a Gift Certificate', 'wc_smart_coupons' );
                 } else {
                     $from = '';
-                    $smart_coupon_type = __( 'Store Credit', 'wc_smart_coupons' );
+                    $smart_coupon_type = __( 'a Gift Certificate', 'wc_smart_coupons' );
                 }
 
                                 $subject_string = ( get_option( 'smart_coupon_email_subject' ) && get_option( 'smart_coupon_email_subject' ) != '' ) ? __( get_option( 'smart_coupon_email_subject' ), 'wc_smart_coupons' ): $subject_string;

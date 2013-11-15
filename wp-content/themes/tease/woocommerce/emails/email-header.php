@@ -56,16 +56,8 @@ $body_content_inner = "
 	text-align:left;
 ";
 $header_content_h1 = "
-	color: " . esc_attr( $base_text ) . ";
-	margin:0;
-	padding: 28px 24px;
-	text-shadow: 0 1px 0 $base_lighter_20;
-	display:block;
-
-	font-size:30px;
-	font-weight:bold;
-	text-align:left;
-	line-height: 150%;
+	color: #fff; font:bold 18px Tahoma; margin:20px 0 25px 0;
+	line-height: 150%; width:100%; text-align:center;
 ";
 ?>
 <!DOCTYPE html>
@@ -91,7 +83,7 @@ $header_content_h1 = "
                                 	<table border="0" cellpadding="0" cellspacing="0" width="650" id="template_header" style="<?php echo $template_header; ?>" bgcolor="<?php echo $base; ?>">
                                         <tr>
                                             <td style="text-align:center;">
-                                            	<a href="http://teaseblowdrybar.com" target="_blank" style="display:inline-block; margin:40px 0 30px 0;"><img style="border:0;" src="http://tease.local/wp-content/themes/tease/images/logo.png" /></a>
+                                            	<a href="http://teaseblowdrybar.com" target="_blank" style="display:inline-block; margin:40px 0 30px 0;"><img style="border:0;" src="http://teasedrybar.com/wp-content/themes/tease/images/logo.png" /></a>
 												<p style="font:normal 11px Helvetica; letter-spacing:0.5px; margin-bottom:20px;">CHARLESTON'S FIRST BLOW DRY BAR</p>
                                             </td>
                                         </tr>
@@ -110,3 +102,4 @@ $header_content_h1 = "
                                                     <tr>
                                                         <td valign="top">
                                                             <div style="<?php echo $body_content_inner; ?>">
+																<h1 style="<?php echo $header_content_h1; ?>"><?php echo $email_heading; ?></h1>
