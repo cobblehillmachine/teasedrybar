@@ -15,6 +15,9 @@ ul, li {list-style:none; padding:0; margin:0;}
 input, textarea, .button, select {-webkit-border-radius:0px; -webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; resize:none;}
 #news #nav-below {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .button:hover {background:#000;}
+input[type="checkbox"] {-webkit-appearance:checkbox;}
+input[type="radio"] {-webkit-appearance:radio;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
 /*HEADER*/
 #header {position:relative; float:left; width:280px; background:#ef4030; height:100%; font:normal 12px "freight-sans-pro"; z-index:10; letter-spacing:1.5px;}
 #header div, #header a {position:relative; float:left; width:100%; text-align:center;}
@@ -167,7 +170,7 @@ input[type="text"], input[type="email"], textarea, input[type="number"], input[t
 #gifts .products .price .amount {color:#ef4030; font:normal 22px 'Didot'; float:left; width:100%; text-align:center; margin-top:20px;}
 #gifts .products .product-info {font-style:italic;}
 #gifts .products .product-title {font-size:18px; text-transform:uppercase;}
-.button {background:#ef4030; color:#fff; font-size:15px; padding:15px 0; text-decoration:none; text-transform:uppercase; float:left; width:100%; border:none; cursor:pointer;}
+.button {background:#ef4030; color:#fff; font-size:15px; padding:15px 0; text-decoration:none; text-transform:uppercase; float:left; width:100%; border:none; cursor:pointer; text-align:center;}
 #splurge .products li:first-child {margin:0 115px 50px;}
 #custom .products li {margin-left:285px;}
 
@@ -199,6 +202,7 @@ input[type="button"] {float:left; width:50px; cursor:pointer;}
 .woocommerce table tr:last-child td {padding:10px 0;}
 .woocommerce table input[type="submit"] {float:left; width:230px;}
 .woocommerce table input[type="submit"]:first-child {margin:0 12px 0 270px;}
+.cart-empty {width:275px;}
 
 /*CHECKOUT*/
 .woocommerce-checkout h3 {font-weight:bold; font-size:14px; color:#fff; text-transform:uppercase; float:left; width:100%; padding:0 0 10px 30px; border-bottom:1px solid #bcbcbc; margin-bottom:30px;  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}

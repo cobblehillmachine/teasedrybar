@@ -1168,7 +1168,7 @@ if ( is_woocommerce_active() ) {
                                     <?php 
                                         echo __( stripslashes( $smart_coupon_store_gift_page_text ) , 'wc_smart_coupons') . '(' . $currency_symbol . ')'; 
                                         echo '</p>';
-                                        echo "<input id='credit_called' type='number' min='1' name='credit_called' value='' autocomplete='off' />";
+                                        echo "<input id='credit_called' type='number' min='1' name='credit_called' value='' autocomplete='off' placeholder='$'/>";
                                     ?>
                                     <p id="error_message" style="color: red;"></p>
                                 </div><br />
@@ -1562,7 +1562,7 @@ if ( is_woocommerce_active() ) {
                                             <ul class="show_hide_list" style="list-style-type: none;">
                                                 <li><input type="radio" id="hide_form" name="is_gift" value="no" checked="checked" /> <label for="hide_form"><?php _e( 'Send gift certificate to me', 'wc_smart_coupons' ); ?></label></li>
                                                 <li>
-                                                    <input type="radio" id="show_form" name="is_gift" value="yes" /> <label for="show_form"><?php _e( 'Gift gift certificate to someone else', 'wc_smart_coupons' ); ?></label>
+                                                    <input type="radio" id="show_form" name="is_gift" value="yes" /> <label for="show_form"><?php _e( 'Send gift certificate to someone else', 'wc_smart_coupons' ); ?></label>
                                                     <ul class="single_multi_list" style="list-style-type: none;">
                                                         <li><input type="radio" id="send_to_one" name="sc_send_to" value="one" checked="checked" /> <label for="send_to_one"><?php _e( 'Send to one person', 'wc_smart_coupons' ); ?></label>
                                                         <input type="radio" id="send_to_many" name="sc_send_to" value="many" /> <label for="send_to_many"><?php _e( 'Send to different people', 'wc_smart_coupons' ); ?></label></li>

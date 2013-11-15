@@ -18,7 +18,7 @@ $header_content_title = "
 
 <?php do_action('woocommerce_email_header', $email_heading); ?>
 
-<p style="font:normal 13px Tahoma; flaot:left; width:100%; text-align:center; margin-bottom:45px;">Your order has been received and is now being processed.<br/> Your order details are shown below for your reference:</p>
+<p style="font:normal 13px Tahoma; flaot:left; width:100%; text-align:center; margin-bottom:45px;">Your order has been received and is now being processed.Print this receipt and visit Tease Blow Dry Bar to pick up your Gift Certificate during your next visit.<br/> Your order details are shown below for your reference:</p>
 
 <?php do_action('woocommerce_email_before_order_table', $order, false); ?>
 

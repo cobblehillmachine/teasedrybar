@@ -1,4 +1,4 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-device-width: 480px) {
 
 #header .small-cont, .page-title, .feature-cont, .bottom-menu, #header .header-text {display:none;}
 #about, #menu, #news, #contact, #gifts, #primary {position:relative; float:left; width:100%; left:0; padding:0; line-height:18px;}
@@ -94,7 +94,7 @@ input[type="text"], input[type="email"], textarea {width:100%; max-width:89%;}
 .cycloneslider-prev, .cycloneslider-next {position:absolute !important; }
 .cycloneslider-template-default .cycloneslider-prev  {left:10px !important;}
 #styles-circle .instruction .ios {display:block;}	
-}
+
 
 /*CART*/
 .woocommerce table {margin-top:25px;}
@@ -124,6 +124,6 @@ form.cart, #payment .place-order {text-align:center;}
 form.checkout #payment {padding-left:0;}
 input[type="radio"] {-webkit-appearance:radio;}
 #paypal_payment_form .button {width:230px;}
-
+}
 
 

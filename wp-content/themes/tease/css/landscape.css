@@ -1,9 +1,9 @@
 @media only screen and (min-device-width: 992px) and (max-device-width: 1100px) and (orientation:landscape) {
 
 	/*HEADER*/
-#header {width:768px; height:auto !important;}
+/*#header {width:768px; height:auto !important;}
 #header #mobile-tab {display:block; position:absolute; bottom:-31px; left:360px; width:50px; height:31px; background:url(../images/mobile-tab.png) 0 0 no-repeat;}
-#header #logo {margin-bottom:0; -webkit-touch-callout: none;}
+#header #logo {margin-bottom:0; -webkit-touch-callout: none;}*/
 
 	/*	HOME*/
 /*.home #header .small-cont, .home #header .bottom-menu, .home #header .header-text {display:block;}
