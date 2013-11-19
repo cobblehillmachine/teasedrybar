@@ -21,7 +21,8 @@
 <?php if ( !empty( $from ) ) { ?>
 	<p style="font:bold 12px Tahoma; float:left; width:100%; text-align:center; margin:15px 0 35px 0; color:#fff;">YOU RECEIVED THIS GIFT CERTIFICATE FROM<br/><font style="color:#fff; text-decoration:none;"><?php echo $sender; ?></font></p>
 <?php } ?>
-<center><p style="font:italic 14px Georgia; color:#fff; margin-bottom:30px;">Visit Tease Blow Dry Bar to pick up your Gift Certificate during your next visit.</p></center>
+<center><p style="font:italic 14px Georgia; color:#fff; margin-bottom:30px;">Please print this email, and bring it with you on your next visit. Gift Certificates Expire One Year from Date of Issue. You may book your appointments online at 
+	<font style="color:#fff; text-decoration:none;"><a href="http://teasedrybar.com" target="_blank" style="color:#fff; text-decoration:none;">TeaseDryBar.com</a></font></p></center>
 <div style="clear:both;"></div>
 
 <?php woocommerce_get_template('emails/email-footer.php'); ?>
