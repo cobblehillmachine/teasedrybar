@@ -360,6 +360,50 @@ function create_post_type() {
   register_post_type( 'tease_choose_a_style', $args1);
   register_post_type( 'tease_specialty', $args2);
   register_post_type( 'tease_treat_yourself', $args3);
+
+	$args4 = array(
+		'labels' => array(
+			'name' => __( 'Bride Trials'),
+			'singular_name' => __( 'Bride Trials')
+		),
+		'public' => true,
+		'rewrite' => array('slug' => 'bride-trials'),
+		'supports' => array( 'title')
+	);
+	register_post_type( 'Bride Trials', $args4);
+	
+	$args5 = array(
+		'labels' => array(
+			'name' => __( 'Bride Wedding'),
+			'singular_name' => __( 'Bride Wedding')
+		),
+		'public' => true,
+		'rewrite' => array('slug' => 'bride-wedding'),
+		'supports' => array( 'title')
+	);
+	register_post_type( 'Bride Wedding', $args5);
+	
+	$args6 = array(
+		'labels' => array(
+			'name' => __( 'Bridal Party'),
+			'singular_name' => __( 'Bridal Party')
+		),
+		'public' => true,
+		'rewrite' => array('slug' => 'bridal-party'),
+		'supports' => array( 'title')
+	);
+	register_post_type( 'Bridal Party', $args6);
+	
+	$args7 = array(
+		'labels' => array(
+			'name' => __( 'Junior Attendant'),
+			'singular_name' => __( 'Junior Attendant')
+		),
+		'public' => true,
+		'rewrite' => array('slug' => 'junior attendant'),
+		'supports' => array( 'title')
+	);
+	register_post_type( 'Junior Attendant', $args7);
   
   
 	// register_taxonomy_for_object_type('post_tag', 'tease_choose_a_style');

@@ -16,7 +16,7 @@ get_header(); ?>
 		 */
 		 do_action( 'woocommerce_before_single_product' );
 	?>	
-	<div class="subtitle">MONEY TO BLOW, <span>Gift Certificate</span></div>
+	<div class="subtitle">GIFT CERTIFICATES</div>
 		<div id="custom"><?php echo do_shortcode('[product_category category="Money To Blow" per_page="12" columns="4" orderby="date" order="asc"]'); ?></div>
 		<div class="line"></div>
 	<div class="subtitle first">SPLURGE, <span>A Full Month of Tease</span></div>

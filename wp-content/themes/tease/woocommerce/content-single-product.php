@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 */
 	 do_action( 'woocommerce_before_single_product' );
 ?>
-	<div class="subtitle">MONEY TO BLOW, <span>Gift Certificate</span></div>
+	<div class="subtitle" style="margin-top:35px;">Custom Gift Certificate</div>
 <div itemscope itemtype="http://schema.org/Product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php

@@ -11,7 +11,7 @@
 
 <div class="main-image">
 	<div class="page-title"><?php the_title(); ?></div>
-	<?php the_post_thumbnail('full'); ?>
+	<?php if(is_page('Groups and Events')) { ?><?php echo do_shortcode('[cycloneslider id="groups-an-events"]'); ?><?php } else { ?><?php the_post_thumbnail('full'); ?><?php } ?>
 </div>
 <div class="page-content">
 	<?php the_content(); ?>

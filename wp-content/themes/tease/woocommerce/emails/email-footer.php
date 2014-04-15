@@ -60,20 +60,20 @@ $social_icon ="float:left; width:20px; height:20px;";
 																430 king street<br/>
 																charleston, sc 29401<br/>
 																<font style="text-decoration:none; color:#fff;"><a style="text-decoration:none; color:#fff;" href="843.724.9493">843.724.9493</a></font><br/>
-																<font style="text-decoration:none; color:#fff;"><a href="mailto:info@teasedrybar.com" style="text-decoration:none; color:#fff;">info@teasedrybar.com</a></font>
+																<font style="text-decoration:none; color:#fff;"><a href="mailto:info@teaseblowdrybar.com" style="text-decoration:none; color:#fff;">info@teaseblowdrybar.com</a></font>
 															</div>
 															<div style="<?php echo $footer_social; ?>">
 																<a style="<?php echo $social_icon; ?>; margin:3px 30px 0 0;" href="http://www.facebook.com/TeaseDryBar" target="_blank">
-																	<img style="border:0; <?php echo $social_img; ?>" src="http://teasedrybar.com/wp-content/themes/tease/images/fb_email.png" />
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://teaseblowdrybar.com/wp-content/themes/tease/images/fb_email.png" />
 																</a>
 																<a style="<?php echo $social_icon; ?>; margin-right:30px;" href="https://twitter.com/TeaseDryBar" target="_blank">
-																	<img style="border:0; <?php echo $social_img; ?>" src="http://teasedrybar.com/wp-content/themes/tease/images/twitter_email.png" />
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://teaseblowdrybar.com/wp-content/themes/tease/images/twitter_email.png" />
 																</a>
 																<a style="<?php echo $social_icon; ?>; margin-right:28px;" href="http://pinterest.com/teasedrybar/" target="_blank">
-																	<img style="border:0; <?php echo $social_img; ?>" src="http://teasedrybar.com/wp-content/themes/tease/images/pinterest_email.png" />
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://teaseblowdrybar.com/wp-content/themes/tease/images/pinterest_email.png" />
 																</a>
 																<a style="<?php echo $social_icon; ?>;" href="http://web.stagram.com/n/teasedrybar/" target="_blank">
-																	<img style="border:0; <?php echo $social_img; ?>" src="http://teasedrybar.com/wp-content/themes/tease/images/instagram_email.png" />
+																	<img style="border:0; <?php echo $social_img; ?>" src="http://teaseblowdrybar.com/wp-content/themes/tease/images/instagram_email.png" />
 																</a>
 														
 															</div>

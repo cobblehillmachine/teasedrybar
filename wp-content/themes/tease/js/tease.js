@@ -12,7 +12,6 @@ $(document).ready(function() {
 	    return $("<div />").append($(this).contents());
 	});
 	centerItem();
-	currentHeaderLinks();
 	centerCircle();
 	//fadeoutCircle();
 	detectIphone();
@@ -24,19 +23,14 @@ $(document).ready(function() {
 	$('#mobile-tab').toggle(function(){
 		$('.small-cont').slideToggle('slow');
 		$('#mobile-tab').css({'background-position-y': -31 +'px'});
-		$('#about-link').css('margin-top' , 50);
 	},
 	function(){
 		$('.small-cont').slideToggle('slow');
 		$('#mobile-tab').css({'background-position-y': 0 +'%'});
-		$('#about-link').css('margin-top' , 50);
 	});
 	$('#call_for_credit p:first-child').html('DOLLAR AMOUNT');
 	$('#gifts .woocommerce-message .button').html('view cart');
 	$('.woocommerce-message .button').before('<div class="close" onclick="closeMessage();">X</div>');
-	$('select').each(function () {
-	        $(this).wrapAll('<div class="styled-select"></div>');
-	   });
 	$('select option:first-child').each(function() {
 		$(this).html('');
 	});
@@ -45,6 +39,8 @@ $(document).ready(function() {
 			headerHeight();
 		});
 	});
+	homeTagline();
+	bridalSlider();
 });
 
 $(window).resize(function() {
@@ -52,11 +48,14 @@ $(window).resize(function() {
 	headerHeight();
 	centerItem();
 	centerCircle();
+	homeTagline();
+	bridalSlider();
 	
 });
 
 $(window).load(function() {
 	headerHeight();
+	bridalSlider();
 	
 });
 
@@ -88,7 +87,7 @@ function headerHeight(){
 	winH = $(window).height();
 header.css({'height':windowHeight});
 $('.wrapper').css({'height':windowHeight});
-$('.cycloneslider-slide, .cycloneslider-slides').css({'height':windowHeight});
+$('.home .cycloneslider-slide, .home .cycloneslider-slides, .single .cycloneslider-slide, .single .cycloneslider-slides').css({'height':windowHeight});
 	// if(winH >= 850){
 	// 	$('body').css('overflow', 'hidden');
 	// } else if 	(winH < 850){
@@ -127,15 +126,6 @@ function centerItem(){
 	}
 }
 
-function currentHeaderLinks() {
-	if(currentUrl == '/about/'){$("#about-link").css('color', '#191919');}
-	else if(currentUrl == '/menu/'){$("#menu-link").css('color', '#191919');}
-	else if(currentUrl == '/gift-certificates/'){$("#gifts-link").css('color', '#191919');}
-	else if(currentUrl == '/groups-and-events/'){$("#groups-link").css('color', '#191919');}
-	else if(currentUrl == '/news/'){$("#news-link").css('color', '#191919');}
-	else if(currentUrl == '/contact/'){$("#contact-link").css('color', '#191919');}
-	// else if(currentUrl == '/main-styles/tease/'){$("#menu-link").css('color', '#191919');}
-}
 
 $('#select-style').live({
 	mouseenter: function(){$('.styles-menu-link').css('display', 'block')}
@@ -150,7 +140,9 @@ function centerCircle(){
   windowWidth = $(window).width();
   windowHeight = $(window).height();
   var w = windowWidth - 280;
-  $('.big-circle').css({'left': (w/2) - 139 , 'top':(windowHeight/2) -139});   
+  var newW = (windowWidth/2) - 139;
+  $('.big-circle').css({'left': (w/2) - 139 , 'top':(windowHeight/2) -139}); 
+	$('#home-tagline').css({'left': newW}); 
 	if(windowWidth < 770){
 		$('.big-circle').css('left', 80);
 	}
@@ -161,3 +153,16 @@ function fadeoutCircle() {
 	$('.cycloneslider-next').click(function(){$('.big-circle').fadeOut();});
 }	
 
+function homeTagline() {
+	// var W = $('#home .vegas-background').width();
+	// var realW = W -280;
+	// $('#home-tagline').css({'width': realW});
+}
+
+function bridalSlider() {
+	// $('#bridal .cycloneslider img').each(function() {
+	// 	var imgH = $(this).height();
+	// 	$('#bridal .cycloneslider-slide').css({'height': imgH});
+	// 	$('#bridal .cycloneslider-slides').css({'height': imgH});
+	// });
+}

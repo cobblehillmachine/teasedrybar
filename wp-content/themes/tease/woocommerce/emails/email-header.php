@@ -83,7 +83,7 @@ $header_content_h1 = "
                                 	<table border="0" cellpadding="0" cellspacing="0" width="650" id="template_header" style="<?php echo $template_header; ?>" bgcolor="<?php echo $base; ?>">
                                         <tr>
                                             <td style="text-align:center;">
-                                            	<a href="http://teaseblowdrybar.com" target="_blank" style="display:inline-block; margin:40px 0 30px 0;"><img style="border:0;" src="http://teasedrybar.com/wp-content/themes/tease/images/logo.png" /></a>
+                                            	<a href="http://teaseblowdrybar.com" target="_blank" style="display:inline-block; margin:40px 0 30px 0;"><img style="border:0;" src="http://teaseblowdrybar.com/wp-content/themes/tease/images/logo.png" /></a>
 												<p style="font:normal 11px Helvetica; letter-spacing:0.5px; margin-bottom:20px;">CHARLESTON'S FIRST BLOW DRY BAR</p>
                                             </td>
                                         </tr>

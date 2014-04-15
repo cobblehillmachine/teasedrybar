@@ -67,6 +67,6 @@ $header_content_title = "
 <?php woocommerce_get_template('emails/email-addresses.php', array( 'order' => $order )); ?>
 
 <center><p style="font:italic 14px Georgia; color:#fff; margin-bottom:30px;">Please print this email, and bring it with you on your next visit. Gift Certificates Expire One Year from Date of Issue. You may book your appointments online at 
-	<font style="color:#fff; text-decoration:none;"><a href="http://teasedrybar.com" target="_blank" style="color:#fff; text-decoration:none;">TeaseDryBar.com</a></font></p></center>
+	<font style="color:#fff; text-decoration:none;"><a href="http://teaseblowdrybar.com" target="_blank" style="color:#fff; text-decoration:none;">TeaseBlowDryBar.com</a></font></p></center>
 
 <?php do_action('woocommerce_email_footer'); ?>

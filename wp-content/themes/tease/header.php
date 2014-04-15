@@ -29,8 +29,8 @@
 
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <!-- <meta name = "viewport" content = "initial-scale = 1.0"> -->
 <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
 <title><?php
@@ -70,8 +70,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <!-- <link rel="stylesheet" type="text/css" media="all" href="<?php// bloginfo( 'stylesheet_url' ); ?>" /> -->
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/tease.css" />
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="<?php echo get_template_directory_uri(); ?>/css/small.css" />
-<link rel="stylesheet" media="all and (orientation:portrait)" href="<?php echo get_template_directory_uri(); ?>/css/portrait.css" /> 
+<!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="<?php echo get_template_directory_uri(); ?>/css/small.css" />
+<link rel="stylesheet" media="all and (orientation:portrait)" href="<?php echo get_template_directory_uri(); ?>/css/portrait.css" />  -->
 <!-- <link rel="stylesheet" media="all and (orientation:landscape)" href="<?php echo get_template_directory_uri(); ?>/css/landscape.css" /> -->
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
@@ -106,27 +106,21 @@
 	<div id="header">
 		<div class="header-cont">
 			<a id="logo" href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /></a>
-			<div class="small-cont">
-				<div class="freight-medium header-text">charleston's first<br/> blow dry bar</div>
-				<a id="about-link" href="/about" class="freight-bold header-links">about</a>
-				<a id="menu-link" href="/menu" class="freight-bold header-links">menu</a>
-				<a id="gifts-link" href="/gift-certificates" class="freight-bold header-links">gift certificates</a>
-				<a id="groups-link" href="/groups-and-events" class="freight-bold header-links">groups &amp; events</a>
-				<a id="book-link" href="http://www.oursalononline.com/Online/%28S%28qnhn1p45e5dozkevaegpzib4%29%29/book.aspx?acc=teasedrybar" class="freight-bold header-links" target="_blank">book</a>
-				<a id="news-link" href="/news" class="freight-bold header-links">news</a>
-				<a id="contact-link" href="/contact" class="freight-bold header-links">contact</a>
-				<a id="contact-link" href="/cart" class="freight-bold header-links">shopping cart</a>
+			<div class="small-cont desktop">
+				<!-- <div class="freight-medium header-text">charleston's first<br/> blow dry bar</div> -->
+				<div id="nav"><?php wp_nav_menu( array( 'menu' => 'Top Nav' ) ); ?></div>
 				<div class="bottom-menu">
 					<div class="dryer-img"><img src="<?php echo get_template_directory_uri(); ?>/images/blow-dry.png" /></div>
 					<!-- <div class="freight-medium header-text">no appointment needed</div> -->
 					<div class="freight-medium address hours">
-						Mon Closed</br>
-						Tues thru Sat 10-7</br>
-						Sun 12-5
+						<!-- Mon Closed</br> -->
+						Wednesday 10-6</br>
+						Thurs to Sat  10-7</br>
+						Sunday  12-5
 					</div>
 					<div class="freight-medium address">
 						430 king street<br/> charleston sc 29403<br/>
-						843.724.9493<br/><a href="mailto:info@teasedrybar.com">info@teasedrybar.com</a>
+						843.724.9493<br/><a href="mailto:info@teaseblowdrybar.com">info@teaseblowdrybar.com</a>
 					</div>
 					<a href="http://www.facebook.com/TeaseDryBar" target="_blank" class="social-links" id="facebook"></a>
 					<a href="https://twitter.com/TeaseDryBar" target="_blank" class="social-links" id="twitter"></a>
@@ -136,7 +130,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="mobile-tab"></div>
+		<div id="mobile-tab" class="mobile"></div>
 	</div>
 	
 
