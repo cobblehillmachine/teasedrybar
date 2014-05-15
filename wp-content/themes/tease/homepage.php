@@ -13,9 +13,9 @@ get_header(); ?>
 				
 			</div><!-- #content -->
 			
-				<?php if ( get_post_meta($post->ID, 'tagline_url', true) ) { ?>
-					<a id="home-tagline" target="_blank" href="<?php the_field('tagline_url'); ?>"><?php the_field('home_tagline'); ?></a> 
-				<?php } else { ?>
+				<?php if ( get_post_meta($post->ID, 'tagline_url', true) && get_post_meta($post->ID, 'home_tagline', true)) { ?>
+					<a id="home-tagline" href="<?php the_field('tagline_url'); ?>"><?php the_field('home_tagline'); ?></a> 
+				<?php } else if ( get_post_meta($post->ID, 'home_tagline', true) ) { ?>
 					<div id="home-tagline"><?php the_field('home_tagline'); ?></div> 
 				<?php } ?>
 		

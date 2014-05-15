@@ -70,8 +70,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <!-- <link rel="stylesheet" type="text/css" media="all" href="<?php// bloginfo( 'stylesheet_url' ); ?>" /> -->
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/tease.css" />
-<!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="<?php echo get_template_directory_uri(); ?>/css/small.css" />
-<link rel="stylesheet" media="all and (orientation:portrait)" href="<?php echo get_template_directory_uri(); ?>/css/portrait.css" />  -->
 <!-- <link rel="stylesheet" media="all and (orientation:landscape)" href="<?php echo get_template_directory_uri(); ?>/css/landscape.css" /> -->
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
@@ -123,9 +121,9 @@
 						843.724.9493<br/><a href="mailto:info@teaseblowdrybar.com">info@teaseblowdrybar.com</a>
 					</div>
 					<a href="http://www.facebook.com/TeaseDryBar" target="_blank" class="social-links" id="facebook"></a>
-					<a href="https://twitter.com/TeaseDryBar" target="_blank" class="social-links" id="twitter"></a>
-					<a href="http://pinterest.com/teasedrybar/" target="_blank" class="social-links" id="pinterest"></a>
-					<a href="http://web.stagram.com/n/teasedrybar/" target="_blank" class="social-links" id="instagram"></a>
+					<a href="https://twitter.com/TeaseBlowDryBar" target="_blank" class="social-links" id="twitter"></a>
+					<a href="http://www.pinterest.com/teaseblowdrybar/" target="_blank" class="social-links" id="pinterest"></a>
+					<a href="http://instagram.com/teaseblowdrybar" target="_blank" class="social-links" id="instagram"></a>
 					<a href="http://cobblehilldigital.com" target="_blank" class="site-credit">site by cobble hill</a>
 				</div>
 			</div>

@@ -56,7 +56,7 @@ mark {background:#fff;}
 #home-circle {background:url(../images/home-circle.png) no-repeat; width:278px; height:278px; position:absolute; z-index:5;}
 #home-circle .view-menu {position:absolute; bottom:55px; width:100%; text-align:center; text-transform:uppercase; color:#fff; text-decoration:none; font:normal 12px "freight-sans-pro";}
 #home-tagline {position:fixed; bottom:0;  z-index:5; color:#fff; background:#474747; padding:40px 0 35px; text-align:center; opacity:.8; filter:alpha(opacity=80); text-decoration:none; width:600px;}
-#home-tagline strong {font-size:18px; text-transform:uppercase;}
+#home-tagline strong {font-size:16px; text-transform:uppercase; letter-spacing:2px;}
 #home-tagline em {font-size:20px; font-family: "adobe-caslon-pro"; letter-spacing:1px;}
 #home-tagline p {margin:0 0 5px;}
 
@@ -260,7 +260,7 @@ form.checkout #payment .payment_methods input, form.checkout #payment .payment_m
 .span_1 {width:8.33333333333%;}
 .span_2 {width:16.6666666667%;}
 .span_3 {width:25.0%; float:left;}
-.span_4, #header {width:33.3333333333%; float:left;}
+.span_4, #header, #bridal #trial .item  {width:33.3333333333%; float:left;}
 .span_5 {width:41.6666666667%; float:left;}
 .span_6 {width:50.0%; float:left;}
 .span_7 {width:58.3333333333%;}
@@ -295,7 +295,7 @@ form.checkout #payment .payment_methods input, form.checkout #payment .payment_m
 #bridal .price .amount {float:left;}
 #bridal .box .item {float:left; width:25%; text-align:center; margin-top:25px;}
 #bridal .box .title {float:left; width:100%;}
-#bridal #trial .item, #bridal #junior .item {width:50%;}
+#bridal #junior .item {width:50%;}
 
 @media screen and (max-width: 1279px) {
 /*	.vegas-background {left:0 !important;}*/
@@ -449,6 +449,6 @@ input[type="radio"] {-webkit-appearance:radio;}
 }
 
 @media screen and (max-width: 480px) {
-	#bridal #trial .item, #bridal #junior .item, #bridal .box .item {width:100%;}
+	#bridal #trial .item, #bridal #junior .item, #bridal .box .item {width:50%;}
 	#bridal .box {padding:50px 25px 40px;}
 }

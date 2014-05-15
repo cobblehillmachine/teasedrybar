@@ -42,7 +42,7 @@
 		<?php endwhile; wp_reset_query(); ?>
 	</div>	
 	<div id="junior" class="cont box">
-		<span>junior copy</span>
+		<span>Flower Girl or Junior Attendant (under 15).</span>
 		<div class="copy"><?php the_field('junior_copy'); ?></div>
 		<?php query_posts(array('post_type' => 'Junior Attendant', 'order' => 'ASC', 'posts_per_page' => 10)); ?>
 		<?php while ( have_posts() ) : the_post(); ?>	
@@ -53,7 +53,7 @@
 		<?php endwhile; wp_reset_query(); ?>
 	</div>
 	<div class="cont box">
-		<span>* ON LOCATION SERVICES OR OFF HOURS IN SALON</span>
+		<span>ON LOCATION SERVICES OR OFF HOURS IN SALON</span>
 		<div class="copy"><?php the_field('on_location_copy'); ?></div>
 	</div>
 </div>
